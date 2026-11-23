@@ -28,6 +28,7 @@ Product configuration choices (for example, "have a wheel", "include a previous-
 Distinguish work someone is asked or commits to perform from a predicted event that happens to them. A passive notification such as "you will receive instructions by email" or "you'll all get instructions emailed to you, I guess" does not assign the recipients work and is not an action. Do not invent a sender or a sending task from it. In contrast, "Alice, email the instructions", "I will send the instructions", "please collect the package", and "review the instructions when they arrive" are actionable. Preserve explicit requests to obtain, receive, acknowledge, or review something; receiving is not a forbidden keyword. Check the surrounding conversation for an actual request or commitment before including an event as a task.
 Polite requests such as "Could we review the dashboard next Friday?" are suggested actions, not pending information questions merely because they use a question mark. Do not list the same request as both an action and pending question.
 In a clear list of assignments, use adjacent turns to interpret omitted repeated verbs (for example, "designer: working design; user interface: technical functions; marketing: requirements"). Keep each assigned work item separate and preserve the exact stated role label without expanding it into an unsupported name or title.
+Before returning, check every segment for an unrepresented deliverable. In a next-work allocation, phrases such as "you're looking at the risk assessment; for you it's the deployment checklist" assign work even without an imperative. Use the surrounding next-work context; the same words in a description of completed work or an agenda do not assign tasks. Preserve each deliverable when recipients are ambiguous, with unknown owners. A question about what a technical term means is clarification, not a replacement for the underlying design assignment. Merge writing a document and saving that same document as one deliverable when they are one continuous commitment; preserve both details. For elliptical owner evidence, cite the preceding explicit owner clause as well as the continuation rather than inventing an owner phrase in the continuation.
 Use assignment_type assignment for requests/assignments (not proof of acceptance), commitment for explicit promises, suggestion for unaccepted proposals.
 Merge duplicate descriptions of the same task. Preserve distinct tasks. Do not infer that a task is completed or still pending today.
 Every action needs supporting segment IDs. Include contextual segments where the task or assignment spans several turns.
@@ -43,6 +44,10 @@ For excerpts, do not claim a question remains open after the full meeting. Use o
 Return empty arrays if there are no supported actions or pending questions. Do not invent entries to fill the schema.
 Return only the specified JSON. Supply segment IDs, never generated quotes or timestamps. Do not output summaries, decision histories, or QA answers.
 """
+
+
+class OwnerEvidenceError(SummaryError):
+    """Owner attribution is unsupported even though its segment IDs are valid."""
 
 
 def evidence_for(references, transcript: Transcript) -> list[Evidence]:
@@ -87,7 +92,7 @@ def resolve_owner(owner, transcript: Transcript) -> Owner:
             resolution_note="The supplied transcript does not establish an owner.",
         )
     if not phrase_is_supported(owner.mention, evidence):
-        raise SummaryError(
+        raise OwnerEvidenceError(
             "Owner mention is not an exact phrase in the cited evidence. No output was saved."
         )
     if owner.kind == "person" and owner.mention.casefold() in {
@@ -113,10 +118,10 @@ def resolve_owner(owner, transcript: Transcript) -> Owner:
         "someone",
         "somebody",
     }:
-        raise SummaryError("An ambiguous pronoun is not an explicitly named person.")
+        raise OwnerEvidenceError("An ambiguous pronoun is not an explicitly named person.")
     if owner.kind == "self":
         if owner.mention.casefold() not in {"i", "i'll", "i’ll", "i will"}:
-            raise SummaryError("A self-assignment must cite an explicit first-person phrase.")
+            raise OwnerEvidenceError("A self-assignment must cite an explicit first-person phrase.")
         # Ignore contextual turns without the first-person phrase when resolving speaker identity.
         relevant = [item for item in evidence if phrase_is_supported(owner.mention, [item])]
         ids = {item.speaker_id for item in relevant}
@@ -216,6 +221,7 @@ def _extract_actions(
     model: str,
     generator: Generator | None = None,
     meeting_date: date | None = None,
+    allow_unknown_owner: bool = False,
 ) -> MeetingActions:
     common = {
         "source_transcript_sha256": hashlib.sha256(
@@ -253,13 +259,29 @@ def _extract_actions(
         ) from None
     actions = []
     for item in generated.action_items:
+        try:
+            owner = resolve_owner(item.owner, transcript)
+        except OwnerEvidenceError:
+            if not allow_unknown_owner:
+                raise
+            owner = Owner(
+                kind="unknown",
+                mention=None,
+                responsible_person=None,
+                speaker_id=None,
+                evidence=[],
+                resolution_note="Owner attribution failed validation after model correction; no identity was inferred.",
+            )
+            common["warnings"].append(
+                f"Owner for action_{len(actions):04d} remains unverified after correction; task retained with unknown owner."
+            )
         actions.append(
             Action(
                 id=f"action_{len(actions):04d}",
                 task=item.task,
                 assignment_type=item.assignment_type,
                 evidence=evidence_for(item.evidence, transcript),
-                owner=resolve_owner(item.owner, transcript),
+                owner=owner,
                 deadline=resolve_deadline(item.deadline, transcript, meeting_date),
             )
         )
@@ -389,7 +411,7 @@ def extract_actions(
         if checked.response is None:
             raise
         checked.error = str(exc)
-    result = _extract_actions(transcript, model, checked, meeting_date)
+    result = _extract_actions(transcript, model, checked, meeting_date, allow_unknown_owner=True)
     result.warnings.append(
         "One model correction was requested after action schema/evidence validation failed."
     )

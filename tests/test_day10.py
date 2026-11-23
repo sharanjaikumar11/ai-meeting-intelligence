@@ -1,6 +1,35 @@
 import pytest
 
 
+def test_invalid_owner_after_correction_preserves_tasks_without_guessing():
+    from test_day04 import Stub, generated, transcript
+
+    from meeting_intelligence.action_extraction import extract_actions
+
+    value = generated()
+    value["action_items"][0]["owner"]["mention"] = "Invented person"
+    stub = Stub(value)
+    result = extract_actions(transcript(), "test", stub)
+    assert stub.calls == 2
+    assert len(result.action_items) == 1
+    assert result.action_items[0].owner.kind == "unknown"
+    assert result.action_items[0].owner.responsible_person is None
+    assert result.action_items[0].owner.evidence == []
+    assert any("unverified" in w for w in result.warnings)
+
+
+def test_owner_fallback_does_not_accept_invented_segment_ids():
+    from test_day04 import Stub, generated, transcript
+
+    from meeting_intelligence.action_extraction import extract_actions
+    from meeting_intelligence.summarization import SummaryError
+
+    value = generated()
+    value["action_items"][0]["owner"]["evidence"] = [{"segment_id": "missing"}]
+    with pytest.raises(SummaryError, match="unknown transcript segment"):
+        extract_actions(transcript(), "test", Stub(value))
+
+
 @pytest.mark.parametrize(
     "task,quote,deadline,expected",
     [

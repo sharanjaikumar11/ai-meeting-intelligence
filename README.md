@@ -4,6 +4,8 @@ Local Python application for meeting transcription, structured extraction, decis
 
 Latest validation (2026-11-23): across six unseen AMI excerpts and 20 reference tasks, task precision is **91.67%**, recall **55.00%**, F1 **68.75%**, and WER **21.44%**. One extraction failed and is included in the score. The 85–90% recall target is not achieved. See [the final validation report](docs/DAY_10_FINAL.md) for owner/detail errors, sampling limits and remaining work.
 
+The v8 development follow-up recovered three known missed assignments in one live check and prevents an invalid owner from discarding every task after correction. **178 tests pass.** This is not a new unseen score; see [the evidence and remaining validation](docs/RECALL_V8.md).
+
 ## Run the application
 
 The verified development platform is Windows, Python 3.11 and CPU inference. Run commands from this repository. Keep the runtime directory separate from the source checkout.
