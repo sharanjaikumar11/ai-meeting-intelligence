@@ -1,0 +1,61 @@
+{
+  "source_file": "synthetic-day04-notifications-vs-tasks-not-a-recording",
+  "source_duration_seconds": 120,
+  "processed_start_seconds": 0,
+  "processed_duration_seconds": 120,
+  "language": "en",
+  "asr_model": "none-synthetic-fixture",
+  "diarization_model": null,
+  "diarization_status": "skipped",
+  "text": "Synthetic transcript fixture; use the segment text below.",
+  "speakers": [],
+  "segments": [
+    {
+      "id": "s0",
+      "source_segment_id": "s0",
+      "start": 0,
+      "end": 8,
+      "text": "You will receive a calendar invitation shortly."
+    },
+    {
+      "id": "s1",
+      "source_segment_id": "s1",
+      "start": 10,
+      "end": 18,
+      "text": "The server will restart automatically tonight."
+    },
+    {
+      "id": "s2",
+      "source_segment_id": "s2",
+      "start": 20,
+      "end": 28,
+      "text": "Alice, email the onboarding guide by tomorrow."
+    },
+    {
+      "id": "s3",
+      "source_segment_id": "s3",
+      "start": 30,
+      "end": 38,
+      "text": "I will send the budget spreadsheet."
+    },
+    {
+      "id": "s4",
+      "source_segment_id": "s4",
+      "start": 40,
+      "end": 48,
+      "text": "Bob, please receive the equipment delivery at reception on 2026-04-06."
+    },
+    {
+      "id": "s5",
+      "source_segment_id": "s5",
+      "start": 50,
+      "end": 58,
+      "text": "Carol, review the security notes when they arrive."
+    }
+  ],
+  "diarization_turns": [],
+  "exclusive_diarization_turns": [],
+  "warnings": [
+    "Synthetic authored test fixture. Not real meeting audio, Whisper output, or a held-out benchmark."
+  ]
+}

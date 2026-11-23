@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "annotation_method": "Assistant-authored structured labels from AMI human transcripts, before model inference; no independent second annotator. Provisional pilot reference.",
+  "cases": [
+    {
+      "id": "ES2004a_0885_1049", "meeting": "ES2004a", "start": 885, "end": 1049,
+      "actions": [
+        {"id": "a1", "task": "Prepare another PowerPoint presentation", "owner": "speaker B (self)", "deadline": null, "evidence": ["ES2004a.sync.271"]}
+      ],
+      "decisions": [],
+      "unresolved": ["Flip-top design and screen options remain proposals with cost concerns", "Material and styling options remain under discussion"],
+      "exclusions": ["Go do individual things lacks a specific deliverable", "Half an hour until next meeting is not an explicit task deadline", "Acknowledgments of design suggestions do not establish a final design"],
+      "qa": [
+        {"question": "Was a flip-top remote control finally agreed, or was it still a suggestion?", "expected": "Still a suggestion; cost implications are unresolved, no final agreement in this excerpt.", "evidence": ["ES2004a.sync.547", "ES2004a.sync.259", "ES2004a.sync.91"]},
+        {"question": "What exact calendar date was agreed for the product launch?", "expected": "Not found; no launch calendar date is supplied.", "evidence": []}
+      ]
+    },
+    {
+      "id": "ES2004d_1420_1660", "meeting": "ES2004d", "start": 1420, "end": 1660,
+      "actions": [
+        {"id": "a1", "task": "Recommend to head office that voice recognition be retained or offered with a larger budget / upgraded version", "owner": "group", "deadline": null, "evidence": ["ES2004d.sync.1240", "ES2004d.sync.560", "ES2004d.sync.898"]}
+      ],
+      "decisions": [
+        {"id": "d1", "outcome": "Remove voice recognition from the budget-constrained base design", "state": "agreed", "evidence": ["ES2004d.sync.1250", "ES2004d.sync.239", "ES2004d.sync.1266", "ES2004d.sync.576", "ES2004d.sync.912", "ES2004d.sync.243"]}
+      ],
+      "unresolved": ["Premium/business-class voice recognition is a recommendation, not an approved funded variant"],
+      "exclusions": ["Battery alternative was considered, not finally selected", "Budget arithmetic is clarification of an existing constraint, not a new decision", "Recommendation work is scored as an action, not duplicated as a separate product decision", "Removing a feature is a design decision, not an assigned implementation task"],
+      "qa": [
+        {"question": "What was finally decided about voice recognition, and why?", "expected": "Remove it from the current design to meet the budget; retaining it in a higher-budget or upgraded offering is only a recommendation.", "evidence": ["ES2004d.sync.1240", "ES2004d.sync.560", "ES2004d.sync.1250", "ES2004d.sync.239", "ES2004d.sync.912"]},
+        {"question": "Who was individually assigned to submit the recommendation, and on what deadline?", "expected": "No individual assignee or submission deadline is established; only a group recommendation is discussed. Partial or supported abstention acceptable.", "evidence": ["ES2004d.sync.1240", "ES2004d.sync.560"]}
+      ]
+    },
+    {
+      "id": "IS1003b_1458_1614", "meeting": "IS1003b", "start": 1458, "end": 1614,
+      "actions": [
+        {"id": "a1", "task": "Work on components", "owner": "role: Industrial Designer", "deadline": null, "evidence": ["IS1003b.sync.683", "IS1003b.sync.396"]},
+        {"id": "a2", "task": "Work on the user interface concept", "owner": "role: User Interface Designer", "deadline": null, "evidence": ["IS1003b.sync.683"]},
+        {"id": "a3", "task": "Save/record presentations in your own folder, not the manager's folder", "owner": "person: David Jordan", "deadline": null, "evidence": ["IS1003b.sync.691", "IS1003b.sync.400"]}
+      ],
+      "decisions": [
+        {"id": "d1", "outcome": "No teletext support/use in the remote design", "state": "agreed", "evidence": ["IS1003b.sync.184", "IS1003b.sync.665", "IS1003b.sync.186", "IS1003b.sync.667"]},
+        {"id": "d2", "outcome": "Design must preserve recognizable company identity and be fashionable/attractive; exact yellow coverage not fixed", "state": "agreed", "evidence": ["IS1003b.sync.653", "IS1003b.sync.900", "IS1003b.sync.661", "IS1003b.sync.906"]}
+      ],
+      "unresolved": ["Exact colour treatment: all-yellow versus a yellow ribbon is not finalized"],
+      "exclusions": ["Florent's work-my-subject assignment is unintelligible and lacks a specific deliverable", "Individual work in thirty minutes describes a session start, not task completion deadline", "Closing meeting and lunch break are logistics, not product decisions", "Coach sending instructions is a passive notification, not an assigned task"],
+      "qa": [
+        {"question": "What should the Industrial Designer and User Interface Designer work on next?", "expected": "Industrial Designer: components. User Interface Designer: user-interface concept. Do not infer named people from speaker IDs.", "evidence": ["IS1003b.sync.683", "IS1003b.sync.396"]},
+        {"question": "Was an entirely yellow remote finally selected?", "expected": "No final all-yellow selection; yellow branding/recognizable company identity is discussed and a yellow ribbon is suggested.", "evidence": ["IS1003b.sync.651", "IS1003b.sync.653", "IS1003b.sync.390"]}
+      ]
+    }
+  ]
+}

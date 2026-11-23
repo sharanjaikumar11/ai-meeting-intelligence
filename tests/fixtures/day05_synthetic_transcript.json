@@ -1,0 +1,103 @@
+{
+  "source_file": "synthetic-day05-not-a-recording",
+  "source_duration_seconds": 120,
+  "processed_start_seconds": 0,
+  "processed_duration_seconds": 120,
+  "language": "en",
+  "asr_model": "none-synthetic-fixture",
+  "diarization_model": null,
+  "diarization_status": "skipped",
+  "text": "I propose CSV for the export format. Agreed, we will use CSV. I object to CSV because it loses nested fields. Let us reopen the format decision. I propose JSON instead. That resolves my concern. We all agree to use JSON instead of CSV. For the export implementation, we agree the deadline is 2026-04-06. Could we move the export implementation deadline to 2026-04-08? Agreed, replace the export deadline with 2026-04-08. Perhaps 2026-04-10 would be easier for the export implementation, but this is only a suggestion. For hosting, I prefer the EU region. I disagree; the US region is better for latency. We cannot agree on hosting today. Defer the hosting region decision.",
+  "speakers": [],
+  "segments": [
+    {
+      "id": "s0",
+      "source_segment_id": "s0",
+      "start": 0,
+      "end": 8,
+      "text": "I propose CSV for the export format."
+    },
+    {
+      "id": "s1",
+      "source_segment_id": "s1",
+      "start": 10,
+      "end": 18,
+      "text": "Agreed, we will use CSV."
+    },
+    {
+      "id": "s2",
+      "source_segment_id": "s2",
+      "start": 20,
+      "end": 28,
+      "text": "I object to CSV because it loses nested fields. Let us reopen the format decision."
+    },
+    {
+      "id": "s3",
+      "source_segment_id": "s3",
+      "start": 30,
+      "end": 38,
+      "text": "I propose JSON instead."
+    },
+    {
+      "id": "s4",
+      "source_segment_id": "s4",
+      "start": 40,
+      "end": 48,
+      "text": "That resolves my concern. We all agree to use JSON instead of CSV."
+    },
+    {
+      "id": "s5",
+      "source_segment_id": "s5",
+      "start": 50,
+      "end": 58,
+      "text": "For the export implementation, we agree the deadline is 2026-04-06."
+    },
+    {
+      "id": "s6",
+      "source_segment_id": "s6",
+      "start": 60,
+      "end": 68,
+      "text": "Could we move the export implementation deadline to 2026-04-08?"
+    },
+    {
+      "id": "s7",
+      "source_segment_id": "s7",
+      "start": 70,
+      "end": 78,
+      "text": "Agreed, replace the export deadline with 2026-04-08."
+    },
+    {
+      "id": "s8",
+      "source_segment_id": "s8",
+      "start": 80,
+      "end": 88,
+      "text": "Perhaps 2026-04-10 would be easier for the export implementation, but this is only a suggestion."
+    },
+    {
+      "id": "s9",
+      "source_segment_id": "s9",
+      "start": 90,
+      "end": 98,
+      "text": "For hosting, I prefer the EU region."
+    },
+    {
+      "id": "s10",
+      "source_segment_id": "s10",
+      "start": 100,
+      "end": 108,
+      "text": "I disagree; the US region is better for latency."
+    },
+    {
+      "id": "s11",
+      "source_segment_id": "s11",
+      "start": 110,
+      "end": 118,
+      "text": "We cannot agree on hosting today. Defer the hosting region decision."
+    }
+  ],
+  "diarization_turns": [],
+  "exclusive_diarization_turns": [],
+  "warnings": [
+    "Synthetic authored test fixture. Not real meeting audio, Whisper output, or a held-out benchmark."
+  ]
+}

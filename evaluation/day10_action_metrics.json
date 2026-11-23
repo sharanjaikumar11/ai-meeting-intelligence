@@ -1,0 +1,143 @@
+{
+  "scope": "Development recheck on known Day 9 examples, not a new held-out score",
+  "baseline_actions": {
+    "tp": 2,
+    "fp": 2,
+    "fn": 3,
+    "precision": 0.5,
+    "recall": 0.4,
+    "f1": 0.4444444444444444
+  },
+  "raw_prompt_result": {
+    "tp": 4,
+    "fp": 3,
+    "fn": 1,
+    "precision": 0.5714285714285714,
+    "recall": 0.8,
+    "f1": 0.6666666666666666
+  },
+  "with_final_guards": {
+    "tp": 4,
+    "fp": 0,
+    "fn": 1,
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1": 0.8888888888888888
+  },
+  "cases": [
+    {
+      "case": "ES2004a_0885_1049",
+      "raw_prompt_result": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "missed_gold_ids": []
+      },
+      "with_final_guards": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "missed_gold_ids": []
+      },
+      "integrity": {
+        "verified_evidence": 3,
+        "transcript_segments": 48,
+        "predicted_speakers": 4,
+        "overlap_segments": 23
+      },
+      "filtered_sha256": "5507a0de108d5472e458925280628a931dee32fa7dcdad439ccaca886f46ff31"
+    },
+    {
+      "case": "ES2004d_1420_1660",
+      "raw_prompt_result": {
+        "tp": 1,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "missed_gold_ids": []
+      },
+      "with_final_guards": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "missed_gold_ids": []
+      },
+      "integrity": {
+        "verified_evidence": 8,
+        "transcript_segments": 103,
+        "predicted_speakers": 4,
+        "overlap_segments": 58
+      },
+      "filtered_sha256": "9c9fb1b6bb4b21b7465bff962977b2bd77a880469dcc68857cf07a1fcb341721"
+    },
+    {
+      "case": "IS1003b_1458_1614",
+      "raw_prompt_result": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "missed_gold_ids": [
+          "a1"
+        ]
+      },
+      "with_final_guards": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "missed_gold_ids": [
+          "a1"
+        ]
+      },
+      "integrity": {
+        "verified_evidence": 5,
+        "transcript_segments": 52,
+        "predicted_speakers": 4,
+        "overlap_segments": 26
+      },
+      "filtered_sha256": "84e257207c78398d77be02a62507ad7e57ca1aabe9bf33df3483cb4ff158c2dd"
+    }
+  ],
+  "owner_on_matched": {
+    "correct": 3,
+    "total": 4
+  },
+  "gemini_attempts": 6,
+  "qa_experiment": "Not adopted: wrong joint role assignment persisted and review had a schema error requiring one repair. Baseline QA prompt restored. Planned one-pass ES2004d probe not run because repair consumed final budget attempt.",
+  "unchanged": [
+    "ASR and its WER",
+    "Decision extraction",
+    "Production QA after experiment rollback",
+    "Original Day 9 gold and metrics"
+  ],
+  "source_sha256": {
+    "meeting_intelligence\\action_extraction.py": "870934e16872153794e537f6e9eacc39d9800645fd18bcbe850bb0826905fb55",
+    "meeting_intelligence\\action_schemas.py": "53b3ecf985f8f8f8c169b32633b3421486e6120f349bcc0e2ecdca8368a8a2fd",
+    "meeting_intelligence\\qa.py": "db391976bda5910f5e315d6d546c2d6db7f92bd29483f4b5d612db73b626b634",
+    "scripts\\score_day10_improvements.py": "9c94a5cc93ff98d4eb3b649f43eab1967f39f5d0d97ff941715e05494008d007"
+  },
+  "review_sha256": "af9880ca66dc2cf0cf55df990da9d6695f2385f37cfdc1593d2cc9b8568da0da",
+  "limitations": [
+    "Same examples used to diagnose and refine changes; no independent generalization claim.",
+    "Task intent only: interface task still contains unsupported flow qualifier; recommendation subject remains underspecified.",
+    "Recommendation owner regressed from group to unknown; matched-owner accuracy must be reported.",
+    "Components assignment is absent from ASR and remains missed.",
+    "Conservative filters can omit implicit tasks; no claim of perfect precision outside this small sample."
+  ]
+}

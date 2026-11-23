@@ -1,0 +1,45 @@
+{
+  "corpus": "AMI Meeting Corpus",
+  "provider": "AMI Consortium / University of Edinburgh",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source": "https://groups.inf.ed.ac.uk/ami/download/",
+  "annotations_url": "https://groups.inf.ed.ac.uk/ami/AMICorpusAnnotations/ami_public_manual_1.6.2.zip",
+  "annotations_sha256": "b56e5babb2496b8795deeeda7e71178d7fbc9963f94276cf2a3f4b56ebbc9f9d",
+  "split_note": "Small project subset; not a claim of the full official benchmark.",
+  "meetings": [
+    {
+      "meeting_id": "ES2002a",
+      "split": "development",
+      "language": "en",
+      "path": "C:\\Users\\shara\\Projects\\ai-meeting-intelligence\\data\\recordings\\ES2002a.Mix-Headset.wav",
+      "source_url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror/amicorpus/ES2002a/audio/ES2002a.Mix-Headset.wav",
+      "sha256": "9c76866990fcc8b84006dc32d273ad99df439090b748ebe72103bb78c3216ee7",
+      "sample_rate": 16000,
+      "channels": 1,
+      "duration_seconds": 1272.64
+    },
+    {
+      "meeting_id": "ES2003a",
+      "split": "validation",
+      "language": "en",
+      "path": "C:\\Users\\shara\\Projects\\ai-meeting-intelligence\\data\\recordings\\ES2003a.Mix-Headset.wav",
+      "source_url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror/amicorpus/ES2003a/audio/ES2003a.Mix-Headset.wav",
+      "sha256": "41cf861afafc20e70061c6cc82b2cb1c620d630be6d13361da928f04fc00beea",
+      "sample_rate": 16000,
+      "channels": 1,
+      "duration_seconds": 1139.765375
+    },
+    {
+      "meeting_id": "ES2004a",
+      "split": "test",
+      "language": "en",
+      "path": "C:\\Users\\shara\\Projects\\ai-meeting-intelligence\\data\\recordings\\ES2004a.Mix-Headset.wav",
+      "source_url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror/amicorpus/ES2004a/audio/ES2004a.Mix-Headset.wav",
+      "sha256": "3e2560b19bee6952c7c7ce041b0f1ea8a7ea9468044c4eea79d2a2c67e24ab0f",
+      "sample_rate": 16000,
+      "channels": 1,
+      "duration_seconds": 1049.3546875
+    }
+  ]
+}

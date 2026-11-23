@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "scope": "Twenty task-intent references from six project-unseen AMI excerpts; assistant annotated from human transcripts before predictions. Not independently human-reviewed; not official AMI test split.",
+  "rubric": "Specific future work; one-to-one task-intent matches, duplicates/unsupported tasks FP and omissions FN. Score owners separately. Exclude immediate meeting conduct, feature proposals and passive email notifications. Do not infer named recipients of you. All null deadlines mean no positive deadline accuracy claim.",
+  "cases": [
+    {"id":"ES2006a_1235_1275","meeting":"ES2006a","start":1235,"end":1275,"actions":[
+      {"id":"a1","task":"Work on the working design","owner":"unknown","evidence":["ES2006a.sync.481"]},
+      {"id":"a2","task":"Work on technical functions design","owner":"unknown","evidence":["ES2006a.sync.483"]},
+      {"id":"a3","task":"Prepare user requirements specification","owner":"unknown","evidence":["ES2006a.sync.485"]}
+    ]},
+    {"id":"ES2007a_1100_1199","meeting":"ES2007a","start":1100,"end":1199,"actions":[
+      {"id":"a1","task":"Work out which buttons the remote needs","owner":"role: User Interface Designer","evidence":["ES2007a.sync.229"]},
+      {"id":"a2","task":"Work out the remote's box/physical design and contents","owner":"role: Industrial Designer","evidence":["ES2007a.sync.231","ES2007a.sync.233"]},
+      {"id":"a3","task":"Research what users want and commonly used buttons to specify user requirements","owner":"role: marketing","evidence":["ES2007a.sync.235","ES2007a.sync.237","ES2007a.sync.245"]}
+    ],"notes":["Marketing research and the user requirements specification form one contextual task, not duplicate gold tasks. Working together is not a distinct deliverable."]},
+    {"id":"ES2010a_0575_0639","meeting":"ES2010a","start":575,"end":639,"actions":[
+      {"id":"a1","task":"Think about the working design","owner":"role: I_D_","evidence":["ES2010a.sync.94"]},
+      {"id":"a2","task":"Design technical functions covering the required remote functionality","owner":"role: U_I_D_","evidence":["ES2010a.sync.96"]},
+      {"id":"a3","task":"Prepare user requirements specification","owner":"person: Courtney (marketing)","evidence":["ES2010a.sync.96","ES2010a.sync.98"]}
+    ]},
+    {"id":"ES2011a_1015_1105","meeting":"ES2011a","start":1015,"end":1105,"actions":[
+      {"id":"a1","task":"Investigate working/physical design including screen ideas","owner":"role: Industrial Designer","evidence":["ES2011a.sync.162","ES2011a.sync.166","ES2011a.sync.263"]},
+      {"id":"a2","task":"Work on technical functions of the remote","owner":"role: User Interface Designer","evidence":["ES2011a.sync.164","ES2011a.sync.394","ES2011a.sync.406"]},
+      {"id":"a3","task":"Work on user requirements","owner":"role: Marketing / M_E_","evidence":["ES2011a.sync.174","ES2011a.sync.176","ES2011a.sync.178"]}
+    ]},
+    {"id":"IS1004a_0700_0767","meeting":"IS1004a","start":700,"end":767,"actions":[
+      {"id":"a1","task":"Research what users expect and will pay for a 25-euro remote","owner":"role: marketing person","evidence":["IS1004a.sync.122","IS1004a.sync.62"]},
+      {"id":"a2","task":"Work on the working design","owner":"unknown","evidence":["IS1004a.sync.64"]},
+      {"id":"a3","task":"Work on technical functions","owner":"unknown","evidence":["IS1004a.sync.64"]},
+      {"id":"a4","task":"Work on user requirements specification","owner":"unknown","evidence":["IS1004a.sync.64"]}
+    ],"notes":["Specific pricing research and the separate specification assignment are counted separately; no named recipient inferred for you."]},
+    {"id":"TS3006a_0807_1000","meeting":"TS3006a","start":807,"end":1000,"actions":[
+      {"id":"a1","task":"Research existing remotes and current/future TV functions online to identify needs and shortcomings","owner":"group / marketing role","evidence":["TS3006a.sync.801","TS3006a.sync.802"]},
+      {"id":"a2","task":"Interview current and future users including early adopters about desired features","owner":"group / marketing role","evidence":["TS3006a.sync.803","TS3006a.sync.805"]},
+      {"id":"a3","task":"Summarize the discussion and put the summary in the project folder","owner":"speaker A self","evidence":["TS3006a.sync.240"]},
+      {"id":"a4","task":"Work on the working design","owner":"role: Industrial Designer","evidence":["TS3006a.sync.242"]}
+    ],"notes":["Market overview and internet search are one task; interview proposal is separate. Summarize and file is one deliverable. Feature wishes are not tasks."]}
+  ]
+}

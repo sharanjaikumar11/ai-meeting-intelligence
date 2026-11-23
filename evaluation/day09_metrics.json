@@ -1,0 +1,214 @@
+{
+  "status": "completed_small_pilot",
+  "annotation_method": "Assistant-authored structured labels from AMI human transcripts, before model inference; no independent second annotator. Provisional pilot reference.",
+  "protocol": "docs/DAY_09_PROTOCOL.md",
+  "freeze_sha256": "57233ef6b7caaa8b30b9e1c0336632816a1028656299ac8ee5f178c3120f8e38",
+  "gold_sha256": "36123b2aaa5efaa9f1213c905c270ab67b555dd57b2305000687c5f6f360f6e1",
+  "adjudication_sha256": "4615fa3ce91175fdd77e102177b4cd7dbb3804c32794477b8749e3148ebfd93d",
+  "scorer_sha256": "1f00e2b595c9f9c9cf12e7e7013f135ef383df3e4f5ed95b81f4e101c93ead3b",
+  "gemini_attempts": 16,
+  "gemini_successful_responses": 15,
+  "audio_seconds": 560,
+  "aggregate": {
+    "actions": {
+      "tp": 2,
+      "fp": 2,
+      "fn": 3,
+      "precision": 0.5,
+      "recall": 0.4,
+      "f1": 0.4444444444444444
+    },
+    "decisions": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5
+    },
+    "wer": {
+      "substitutions": 94,
+      "deletions": 356,
+      "insertions": 30,
+      "reference_words": 1698,
+      "word_errors": 480,
+      "wer": 0.2826855123674912
+    },
+    "qa": {
+      "full": 4,
+      "partial": 0,
+      "incorrect": 2,
+      "total": 6,
+      "correctness": 0.6666666666666666
+    },
+    "qa_by_question_type": {
+      "answerable": {
+        "full": 2,
+        "partial": 0,
+        "incorrect": 2,
+        "total": 4,
+        "correctness": 0.5
+      },
+      "missing_information": {
+        "full": 2,
+        "partial": 0,
+        "incorrect": 0,
+        "total": 2,
+        "correctness": 1.0
+      }
+    },
+    "owner_on_matched_tasks": {
+      "correct": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "missing_deadline_on_matched_tasks": {
+      "correct": 2,
+      "total": 2,
+      "accuracy": 1.0,
+      "positive_deadline_examples": 0
+    },
+    "evidence_references_verified": 93
+  },
+  "cases": [
+    {
+      "case": "ES2004a_0885_1049",
+      "audio_seconds": 164,
+      "wer": {
+        "substitutions": 18,
+        "deletions": 107,
+        "insertions": 4,
+        "reference_words": 580,
+        "word_errors": 129,
+        "wer": 0.22241379310344828
+      },
+      "actions": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "missed_gold_ids": [
+          "a1"
+        ]
+      },
+      "decisions": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "missed_gold_ids": []
+      },
+      "qa": {
+        "full": 2,
+        "partial": 0,
+        "incorrect": 0,
+        "total": 2,
+        "correctness": 1.0
+      },
+      "integrity": {
+        "evidence_references_verified": 24,
+        "predicted_speakers": 4
+      }
+    },
+    {
+      "case": "ES2004d_1420_1660",
+      "audio_seconds": 240,
+      "wer": {
+        "substitutions": 47,
+        "deletions": 189,
+        "insertions": 12,
+        "reference_words": 777,
+        "word_errors": 248,
+        "wer": 0.31917631917631917
+      },
+      "actions": {
+        "tp": 1,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "missed_gold_ids": []
+      },
+      "decisions": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "missed_gold_ids": []
+      },
+      "qa": {
+        "full": 1,
+        "partial": 0,
+        "incorrect": 1,
+        "total": 2,
+        "correctness": 0.5
+      },
+      "integrity": {
+        "evidence_references_verified": 50,
+        "predicted_speakers": 4
+      }
+    },
+    {
+      "case": "IS1003b_1458_1614",
+      "audio_seconds": 156,
+      "wer": {
+        "substitutions": 29,
+        "deletions": 60,
+        "insertions": 14,
+        "reference_words": 341,
+        "word_errors": 103,
+        "wer": 0.3020527859237537
+      },
+      "actions": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "missed_gold_ids": [
+          "a1",
+          "a2"
+        ]
+      },
+      "decisions": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "missed_gold_ids": [
+          "d1",
+          "d2"
+        ]
+      },
+      "qa": {
+        "full": 1,
+        "partial": 0,
+        "incorrect": 1,
+        "total": 2,
+        "correctness": 0.5
+      },
+      "integrity": {
+        "evidence_references_verified": 19,
+        "predicted_speakers": 4
+      }
+    }
+  ],
+  "limitations": [
+    "Small purposive project-held-out pilot; not official AMI benchmark or team-disjoint split.",
+    "Structured gold and semantic adjudication authored by assistant, not independently human-validated.",
+    "No positive task deadlines or accepted deadline revisions; no positive deadline accuracy claim.",
+    "WER uses onset-serialized overlapping speech; diarization error rate not measured.",
+    "QA is six fixed questions using batched draft/review inference.",
+    "Source citation integrity is not semantic accuracy."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "source_transcript_sha256": "e628269b3486657843fba9f3e1f7d5f643e4d3d501935dc521bd63dc3024e6d1",
+  "basis": "AMI ES2002a human word annotations; supervised correction, not automatic model improvement",
+  "corrections": [
+    {
+      "start": 151.79,
+      "end": 154.48,
+      "speaker_id": "SPEAKER_03",
+      "reason": "Reference word ES2002a.B.words226 (Um); restore the annotated B interval across a missed vocalization."
+    },
+    {
+      "start": 167.36,
+      "end": 167.81,
+      "speaker_id": "SPEAKER_02",
+      "reason": "Reference words ES2002a.D.words30 and words31 (That is/fine); D interjection also present in regular overlapping diarization."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "source_file": "synthetic-authored-day04-fixture-not-a-recording",
+  "source_duration_seconds": 120,
+  "processed_start_seconds": 0,
+  "processed_duration_seconds": 120,
+  "language": "en",
+  "asr_model": "none-synthetic-fixture",
+  "diarization_model": null,
+  "diarization_status": "skipped",
+  "text": "Synthetic transcript fixture; use the segment text below.",
+  "speakers": [],
+  "segments": [
+    {"id": "s0", "source_segment_id": "s0", "start": 0, "end": 8, "text": "Alice, prepare the evaluation report by tomorrow."},
+    {"id": "s1", "source_segment_id": "s1", "start": 10, "end": 18, "text": "Bob, update the README by 2026-04-06."},
+    {"id": "s2", "source_segment_id": "s2", "start": 20, "end": 28, "text": "Prepare a deployment checklist."},
+    {"id": "s3", "source_segment_id": "s3", "start": 30, "end": 38, "text": "Should the report use CSV or JSON?"},
+    {"id": "s4", "source_segment_id": "s4", "start": 40, "end": 48, "text": "Use CSV for the report."},
+    {"id": "s5", "source_segment_id": "s5", "start": 50, "end": 58, "text": "Which hosting region should we use?"},
+    {"id": "s6", "source_segment_id": "s6", "start": 60, "end": 68, "text": "The hosting region remains open until the next meeting."},
+    {"id": "s7", "source_segment_id": "s7", "start": 70, "end": 78, "text": "I will send the sample audio."},
+    {"id": "s8", "source_segment_id": "s8", "start": 80, "end": 88, "text": "Could we review the dashboard next Friday?"},
+    {"id": "s9", "source_segment_id": "s9", "start": 90, "end": 98, "text": "This meeting lasts thirty minutes."}
+  ],
+  "diarization_turns": [],
+  "exclusive_diarization_turns": [],
+  "warnings": ["Synthetic authored test fixture. Not real meeting audio, Whisper output, or a held-out benchmark."]
+}
