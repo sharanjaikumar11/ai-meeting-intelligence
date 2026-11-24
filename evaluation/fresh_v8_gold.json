@@ -1,0 +1,15 @@
+{
+  "scope": "Fresh v8 check on two excerpts of ES2009a, selected and annotated before ASR/model predictions; one meeting is not a generalization benchmark.",
+  "annotation": "Assistant labels from AMI human transcripts, not independently human-reviewed.",
+  "rubric": "One-to-one task-intent matching. Duplicate or unsupported work is FP, omitted work FN. Owners and details scored separately. Product constraints, passive emails, meeting closure and vague brainstorming are not separate tasks.",
+  "cases": [
+    {"id":"ES2009a_0825_0891","meeting":"ES2009a","start":825,"end":891,"actions":[
+      {"id":"a1","task":"Think about what needs to be done and the basic function of the remote","owner":"role: Industrial Designer","evidence":["ES2009a.sync.138"]},
+      {"id":"a2","task":"Tell the team what the user will want","owner":"unknown; ambiguous you","evidence":["ES2009a.sync.140"]},
+      {"id":"a3","task":"Discuss user wants versus feasible capabilities and their trade-offs at the next meeting","owner":"group: you guys / we","deadline":"next meeting (event-relative, no calendar date)","evidence":["ES2009a.sync.140","ES2009a.sync.141"]}
+    ],"notes":["Treat reporting user wants and the explicit collective discussion as separate deliverables. The UID assignment is unspecified, so do not invent its task. Meeting starts in half an hour is not a deadline for all tasks."]},
+    {"id":"ES2009a_1300_1399","meeting":"ES2009a","start":1300,"end":1399,"actions":[
+      {"id":"a1","task":"Put the initial ideas and trade-offs discussed into the project documents","owner":"self: speaker A","evidence":["ES2009a.sync.244"]}
+    ],"notes":["Have a think about what we can do is vague brainstorming, not a concrete deliverable. Consulting the documents at leisure is optional availability, not an assigned task. No task deadline is established."]}
+  ]
+}

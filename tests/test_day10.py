@@ -1,6 +1,21 @@
 import pytest
 
 
+@pytest.mark.parametrize("phrase", ["I'm", "I’m", "I am"])
+def test_present_first_person_commitment_resolves_owner(phrase):
+    from test_day04 import ref, transcript
+
+    from meeting_intelligence.action_extraction import resolve_owner
+    from meeting_intelligence.action_schemas import GeneratedOwner
+
+    owner = resolve_owner(
+        GeneratedOwner(kind="self", mention=phrase, evidence=ref()),
+        transcript(f"{phrase} going to write the notes.", "SPEAKER_00"),
+    )
+    assert owner.kind == "self" and owner.speaker_id == "SPEAKER_00"
+    assert owner.responsible_person is None
+
+
 def test_invalid_owner_after_correction_preserves_tasks_without_guessing():
     from test_day04 import Stub, generated, transcript
 
@@ -42,6 +57,20 @@ def test_owner_fallback_does_not_accept_invented_segment_ids():
         ("take material measurements", "We could take material measurements.", None, 1),
         ("change the specification", "Should we change the specification?", None, 0),
         ("change the specification", "I will change the specification.", None, 1),
+        ("be careful about the audience", "I'll be careful about the audience.", None, 0),
+        (
+            "be careful when reviewing the invoice",
+            "Please be careful when reviewing the invoice.",
+            None,
+            1,
+        ),
+        ("keep the budget in mind", "We should keep the budget in mind.", None, 0),
+        (
+            "keep the budget in mind when preparing the quote",
+            "Please keep the budget in mind when preparing the quote.",
+            None,
+            1,
+        ),
     ],
 )
 def test_followup_tasks_distinguished_from_choices_and_meeting_conduct(

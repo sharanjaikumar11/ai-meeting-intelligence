@@ -1,8 +1,10 @@
 # AI Meeting Intelligence Agent
 
+**Final submission, 24 November 2026:** all required implementation deliverables are complete within the documented scope. [Read the final report](docs/FINAL_REPORT.md). The revised v9 extractor improved recall from **55% to 75%** and F1 from **68.75% to 81.08%** on the same 20-task development set. The separate fresh v8 check recovered 4/4 tasks with 80% precision; its later v9 retest is development evidence. **185 tests, Ruff, formatting and ESLint pass.** The 85–90% broad recall target remains unmet.
+
 Local Python application for meeting transcription, structured extraction, decision tracking and evidence-backed questions. Public repository: [ai-meeting-intelligence](https://github.com/sharanjaikumar11/ai-meeting-intelligence).
 
-Latest validation (2026-11-23): across six unseen AMI excerpts and 20 reference tasks, task precision is **91.67%**, recall **55.00%**, F1 **68.75%**, and WER **21.44%**. One extraction failed and is included in the score. The 85–90% recall target is not achieved. See [the final validation report](docs/DAY_10_FINAL.md) for owner/detail errors, sampling limits and remaining work.
+Frozen v7 baseline (2026-11-23): across six then-unseen AMI excerpts and 20 reference tasks, task precision was **91.67%**, recall **55.00%**, F1 **68.75%**, and WER **21.44%**. One extraction failed and is included in the score. See [the historical validation report](docs/DAY_10_FINAL.md).
 
 The v8 development follow-up recovered three known missed assignments in one live check and prevents an invalid owner from discarding every task after correction. **178 tests pass.** This is not a new unseen score; see [the evidence and remaining validation](docs/RECALL_V8.md).
 
@@ -28,7 +30,7 @@ npm ci
 
 This runs Ruff lint, Ruff formatting checks, JavaScript ESLint and the Python regression suite. Every check must pass before committing or pushing. Development tools are pinned in `requirements-dev.txt` and `package-lock.json`. Tests use a new project-local temporary directory on each run.
 
-Status: Days 1–9 complete within their documented scope. Day 9's small pilot measured WER 28.27%, action F1 44.44%, final-decision F1 50.00%, and strict QA correctness 4/6. Accuracy needs improvement; these are provisional scores with assistant-authored references, not independent human validation. The local application integrates audio/video upload, timestamped transcription, speaker labeling, summaries, tasks, decision/deadline tracking, evidence-backed questions and JSON download. The latest suite has 176 passing tests. See [Day 9 results and limitations](docs/DAY_09.md). Day 10 remains open.
+Status: Days 1–9 complete within their documented scope. Day 9's small pilot measured WER 28.27%, action F1 44.44%, final-decision F1 50.00%, and strict QA correctness 4/6. Accuracy needs improvement; these are provisional scores with assistant-authored references, not independent human validation. The local application integrates audio/video upload, timestamped transcription, speaker labeling, summaries, tasks, decision/deadline tracking, evidence-backed questions and JSON download. The latest suite has 176 passing tests. See [Day 9 results and limitations](docs/DAY_09.md). Day 10 implementation and submission are complete; model-accuracy limits remain documented in FINAL_REPORT.md.
 
 ## Objective
 

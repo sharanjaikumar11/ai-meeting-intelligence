@@ -1,0 +1,81 @@
+{
+  "scope": "Fresh v8 check on two excerpts of ES2009a, selected and annotated before ASR/model predictions; one meeting is not a generalization benchmark.",
+  "annotation": "Assistant semantic adjudication against frozen labels; not independent human review. Owner a2 in the first case is contextually ambiguous.",
+  "gold_sha256": "6f4d1bb8677093c1e3b9e8bc81a56d238e76ddbf0cc40ea25913cf00e87ca2a5",
+  "review_sha256": "0541bcc6c967d5be0c4bf474725fa34b174891f4faea118e0c443b2c8ea449ac",
+  "cases": [
+    {
+      "case": "ES2009a_0825_0891",
+      "actions": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "missed_gold_ids": []
+      },
+      "wer": {
+        "substitutions": 6,
+        "deletions": 31,
+        "insertions": 3,
+        "reference_words": 214,
+        "word_errors": 40,
+        "wer": 0.18691588785046728
+      },
+      "pipeline_failed": false
+    },
+    {
+      "case": "ES2009a_1300_1399",
+      "actions": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "missed_gold_ids": []
+      },
+      "wer": {
+        "substitutions": 16,
+        "deletions": 22,
+        "insertions": 3,
+        "reference_words": 278,
+        "word_errors": 41,
+        "wer": 0.1474820143884892
+      },
+      "pipeline_failed": false
+    }
+  ],
+  "actions": {
+    "tp": 4,
+    "fp": 1,
+    "fn": 0,
+    "precision": 0.8,
+    "recall": 1.0,
+    "f1": 0.8888888888888888
+  },
+  "wer": {
+    "substitutions": 22,
+    "deletions": 53,
+    "insertions": 6,
+    "reference_words": 492,
+    "word_errors": 81,
+    "wer": 0.16463414634146342
+  },
+  "owner_correct": {
+    "correct": 2,
+    "matched_tasks": 4
+  },
+  "detail_correct": {
+    "correct": 2,
+    "matched_tasks": 4
+  },
+  "exact_evidence_verified": 16,
+  "limitations": [
+    "Small purposive kickoff-meeting sample; not general meeting accuracy.",
+    "Assistant semantic adjudication; no independent human review.",
+    "No aggregate deadline accuracy estimate; inspect the semantic review for deadline findings.",
+    "Task-intent scoring does not imply correct owner or complete detail."
+  ]
+}

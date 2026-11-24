@@ -18,8 +18,11 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--environment-root", type=Path, required=True)
     p.add_argument("--port", type=int, default=8001)
+    p.add_argument(
+        "--budget-folder", type=Path, help="Existing shared daily request ledger directory."
+    )
     a = p.parse_args()
-    budget = Budget(a.environment_root / "outputs/day10/final_2026-11-23", 20)
+    budget = Budget(a.budget_folder or a.environment_root / "outputs/day10/final_2026-11-23", 20)
 
     def generator(
         settings, schema=GeneratedNotes, instruction=SYSTEM_INSTRUCTION, max_output_tokens=8192

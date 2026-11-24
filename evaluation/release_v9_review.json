@@ -1,0 +1,204 @@
+{
+  "scope": "Known-case development regression, not new unseen scores.",
+  "gold_sha256": {
+    "day10_unseen": "1b77a541093bde9fb3fb230f57763eeb20eb42310551bb45451e1959aafea9ea",
+    "fresh_v8": "6f4d1bb8677093c1e3b9e8bc81a56d238e76ddbf0cc40ea25913cf00e87ca2a5"
+  },
+  "cases": {
+    "ES2006a_1235_1275": {
+      "actions_sha256": "f362b2510c07b988df1adeb1c3f86cd120b311bc47be49d15cb3c817e8d6a5a4",
+      "transcript_sha256": "91db41aa0c777758fadd3ddff6567ea4c3337cabf6e0d642c475d757a546acb8",
+      "actions": [
+        {
+          "prediction_id": "action_0000",
+          "gold_id": "a1",
+          "owner_correct": true,
+          "detail_correct": true,
+          "reason": "Working design recovered with unknown recipient."
+        },
+        {
+          "prediction_id": "action_0001",
+          "gold_id": "a2",
+          "owner_correct": true,
+          "detail_correct": true,
+          "reason": "Technical functions design recovered with unknown recipient."
+        },
+        {
+          "prediction_id": "action_0002",
+          "gold_id": "a3",
+          "owner_correct": true,
+          "detail_correct": true,
+          "reason": "User requirements specification recovered with unknown recipient."
+        }
+      ]
+    },
+    "ES2007a_1100_1199": {
+      "actions_sha256": "f87915cdfef1054ea2b99758953a5de4b776ae9d87c6d9030b4901c4669d3ac9",
+      "transcript_sha256": "d6fcc51f6be2f6a346f2c02ef4f34004199235ca220bc01d236eaf62075ee74e",
+      "actions": [
+        {
+          "prediction_id": "action_0000",
+          "gold_id": "a1",
+          "owner_correct": false,
+          "detail_correct": true,
+          "reason": "Buttons task matches, but marketing attribution is wrong; reference assigns User Interface Designer."
+        },
+        {
+          "prediction_id": "action_0001",
+          "gold_id": "a2",
+          "owner_correct": true,
+          "detail_correct": false,
+          "reason": "Box design matches, contents/working detail omitted."
+        },
+        {
+          "prediction_id": "action_0002",
+          "gold_id": "a3",
+          "owner_correct": true,
+          "detail_correct": false,
+          "reason": "Marketing research intent and role match; specification deliverable omitted."
+        }
+      ]
+    },
+    "ES2010a_0575_0639": {
+      "actions_sha256": "034c8818e9faedb097bef551904e439d60e630c96b042b377c40a43774d5b20f",
+      "transcript_sha256": "e80c61a22b29027dd11e19c12c1c5c582a5340e35419569d287678f2befcff38",
+      "actions": [
+        {
+          "prediction_id": "action_0000",
+          "gold_id": "a1",
+          "owner_correct": true,
+          "detail_correct": true,
+          "reason": "Working design assigned to ID."
+        },
+        {
+          "prediction_id": "action_0001",
+          "gold_id": "a3",
+          "owner_correct": true,
+          "detail_correct": true,
+          "reason": "Requirements specification assigned to Courtney; technical functions remains missed."
+        }
+      ]
+    },
+    "ES2011a_1015_1105": {
+      "actions_sha256": "89ec6457ba3bbcee607208106c7ee6c428fba697b2223333de86abc11fc3c05a",
+      "transcript_sha256": "9b729726c8e560008543f699506461210ecd180ae1bacbe535c413fbfa3db44e",
+      "actions": [
+        {
+          "prediction_id": "action_0000",
+          "gold_id": "a1",
+          "owner_correct": true,
+          "detail_correct": true,
+          "reason": "Working design and screen scope retained with correct role."
+        },
+        {
+          "prediction_id": "action_0001",
+          "gold_id": null,
+          "owner_correct": false,
+          "detail_correct": false,
+          "reason": "Clarifying a term is not the assigned technical-functions design deliverable; unsupported self commitment."
+        },
+        {
+          "prediction_id": "action_0002",
+          "gold_id": "a3",
+          "owner_correct": false,
+          "detail_correct": true,
+          "reason": "User requirements task matches but group owner replaces marketing role."
+        }
+      ]
+    },
+    "IS1004a_0700_0767": {
+      "actions_sha256": "ec4d6d4103d582f64f6e94f5bc8f22c4ba934c630d61e450aec63fce62ecef5f",
+      "transcript_sha256": "719f753f8a5d96a9c78e4bb89a527a4ae22c4c0fe095a369463a2e7ab97f8c1d",
+      "actions": [
+        {
+          "prediction_id": "action_0000",
+          "gold_id": "a1",
+          "owner_correct": true,
+          "detail_correct": true,
+          "reason": "Pricing research matches marketing role."
+        },
+        {
+          "prediction_id": "action_0001",
+          "gold_id": "a2",
+          "owner_correct": true,
+          "detail_correct": true,
+          "reason": "Working design with unknown owner."
+        },
+        {
+          "prediction_id": "action_0002",
+          "gold_id": "a3",
+          "owner_correct": true,
+          "detail_correct": true,
+          "reason": "Technical functions with unknown owner."
+        },
+        {
+          "prediction_id": "action_0003",
+          "gold_id": "a4",
+          "owner_correct": true,
+          "detail_correct": true,
+          "reason": "Requirements specification with unknown owner."
+        }
+      ]
+    },
+    "TS3006a_0807_1000": {
+      "actions_sha256": "fc97204ffdd5d28941e84fc80b1c65c9ca4d647c80c5593b899195e3524e0d1a",
+      "transcript_sha256": "aa905037cc1fa0fce1aecc3474e9c5fde29642bf55498bd21ca5d6cee583f90e",
+      "actions": [
+        {
+          "prediction_id": "action_0000",
+          "gold_id": null,
+          "owner_correct": false,
+          "detail_correct": false,
+          "reason": "Get that information is too underspecified to identify the frozen online research or interviewing deliverable; sole cited segment does not identify the work object."
+        },
+        {
+          "prediction_id": "action_0001",
+          "gold_id": "a3",
+          "owner_correct": true,
+          "detail_correct": true,
+          "reason": "Summarizing and filing now one complete self-assigned deliverable; no named identity inferred."
+        }
+      ]
+    },
+    "ES2009a_0825_0891": {
+      "actions_sha256": "3e3239fbf4c707a885f9adefe3637d7271cb7dc037a482528d66ad7cacc997a7",
+      "transcript_sha256": "3718f59db99f6e379dbe74d775bcb6d4b4f19196c5febf94d007a18268524ab0",
+      "actions": [
+        {
+          "prediction_id": "action_0000",
+          "gold_id": "a1",
+          "owner_correct": true,
+          "detail_correct": true,
+          "reason": "Basic-function work and Industrial Designer role retained; assignment_type suggestion is weaker than the request and remains a separate limitation."
+        },
+        {
+          "prediction_id": "action_0001",
+          "gold_id": "a2",
+          "owner_correct": false,
+          "detail_correct": true,
+          "reason": "Reporting user wants matches; UID attribution is plausible but remains ambiguous under frozen owner rubric."
+        },
+        {
+          "prediction_id": "action_0002",
+          "gold_id": "a3",
+          "owner_correct": true,
+          "detail_correct": true,
+          "reason": "Group discussion matches; next-meeting deadline retained without a guessed date."
+        }
+      ]
+    },
+    "ES2009a_1300_1399": {
+      "actions_sha256": "641d9ccd30b612374ad6f09eae8869edf9316e63321a627fa0c43e106b6c9938",
+      "transcript_sha256": "8b634848f2e1dee5aa41f2c32a3b32cfe95bfd0658d5777dff0b84034d565f95",
+      "actions": [
+        {
+          "prediction_id": "action_0000",
+          "gold_id": "a1",
+          "owner_correct": true,
+          "detail_correct": false,
+          "reason": "Documenting initial ideas matches and explicit I am contraction now resolves; trade-off detail still omitted."
+        }
+      ]
+    }
+  }
+}

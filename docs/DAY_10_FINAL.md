@@ -1,5 +1,7 @@
 # Day 10 validation and publication
 
+Historical 23 November report. The remaining demo QA was completed on 24 November, and v9 accuracy work was evaluated. See [the final submission report](FINAL_REPORT.md) for current status and results.
+
 ## Unseen action extraction: 2026-11-23
 
 The frozen candidate was evaluated on 20 reference tasks in six project-unseen AMI excerpts (553 seconds). References were annotated by the assistant from AMI human transcripts before prediction. This is a small, purposively selected kickoff-meeting sample, not an official test split or independent human validation. Whisper small used beam size 5; the ordinary web app retains its existing decoding default.

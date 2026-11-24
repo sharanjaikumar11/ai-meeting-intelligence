@@ -94,7 +94,7 @@ class PendingQuestion(StrictModel):
 
 class MeetingActions(StrictModel):
     schema_version: str = "1.0"
-    prompt_version: str = "day10-actions-v8"
+    prompt_version: str = "day10-actions-v9"
     generation_status: Literal["generated", "no_speech"]
     input_scope: Literal["full_recording", "excerpt"]
     processed_interval: Span

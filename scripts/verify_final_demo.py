@@ -80,6 +80,7 @@ def main():
             save()
         verify(dict(transcript=result["transcript"], qa=report["qa"]))
         report["exact_evidence_verified"] = True
+        report["live_qa_status"] = "completed"
         save()
         print("Real-model demo completed:", report["meeting_id"], flush=True)
 

@@ -41,6 +41,7 @@ Deadline text must be ONE EXACT phrase from a cited segment and must apply to th
 If no deadline is established, use null text and empty evidence. Do not generate ISO dates; the application normalizes unambiguous dates separately.
 Pending questions are substantive questions left unanswered or explicitly deferred at the end of the SUPPLIED transcript. Exclude questions answered later in this transcript, rhetorical questions, and introductory prompts such as who wants to go first.
 For excerpts, do not claim a question remains open after the full meeting. Use only the supplied interval.
+General cautions such as "be careful about the audience" or "keep the budget in mind" are constraints, not deliverables. Retain a concrete assigned activity that accompanies a caution, such as reviewing a contract. Preserve supported functional scope and trade-off details when summarizing a task. Do not infer an owner solely because a role was mentioned nearby; the task's clause or its unambiguous continuation must establish that owner.
 Return empty arrays if there are no supported actions or pending questions. Do not invent entries to fill the schema.
 Return only the specified JSON. Supply segment IDs, never generated quotes or timestamps. Do not output summaries, decision histories, or QA answers.
 """
@@ -120,7 +121,7 @@ def resolve_owner(owner, transcript: Transcript) -> Owner:
     }:
         raise OwnerEvidenceError("An ambiguous pronoun is not an explicitly named person.")
     if owner.kind == "self":
-        if owner.mention.casefold() not in {"i", "i'll", "i’ll", "i will"}:
+        if owner.mention.casefold() not in {"i", "i'll", "i’ll", "i will", "i'm", "i’m", "i am"}:
             raise OwnerEvidenceError("A self-assignment must cite an explicit first-person phrase.")
         # Ignore contextual turns without the first-person phrase when resolving speaker identity.
         relevant = [item for item in evidence if phrase_is_supported(owner.mention, [item])]
@@ -338,6 +339,16 @@ def guard_product_choices(result):
             )
         )
         future_meeting = bool(re.search(r"\b(?:next|tomorrow|later|upcoming)\b", evidence, re.I))
+        caution = bool(
+            re.match(r"\s*(?:be careful|be mindful|keep\b.*\bin mind\b)", action.task, re.I)
+        )
+        concrete_work = bool(
+            re.search(
+                r"\b(?:review(?:ing)?|check(?:ing)?|test(?:ing)?|research(?:ing)?|draft(?:ing)?|writ(?:e|ing)|prepar(?:e|ing)|summariz(?:e|ing)|measur(?:e|ing)|contact(?:ing)?|submit(?:ting)?|updat(?:e|ing)|implement(?:ing)?|install(?:ing)?|inspect(?:ing)?)\b",
+                action.task,
+                re.I,
+            )
+        )
         work_cue = bool(
             re.search(
                 r"\b(?:please|assigned|task|responsible|implement|install|before|by|could you|can you|you should|you need|will you|I will|I['’]ll)\b",
@@ -345,7 +356,9 @@ def guard_product_choices(result):
                 re.I,
             )
         )
-        if meeting_conduct and not future_meeting and action.deadline.text is None:
+        if caution and not concrete_work:
+            omitted.append(action.task)
+        elif meeting_conduct and not future_meeting and action.deadline.text is None:
             omitted.append(action.task)
         elif (
             feature
@@ -364,7 +377,7 @@ def guard_product_choices(result):
             "action_items": kept,
             "warnings": result.warnings
             + [
-                "Unassigned product choices or immediate meeting-conduct announcements omitted from follow-up tasks: "
+                "Unassigned product choices, general cautions or immediate meeting-conduct announcements omitted from follow-up tasks: "
                 + "; ".join(omitted)
                 + ". This conservative check may omit implicit tasks; review the source."
             ],

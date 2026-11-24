@@ -15,11 +15,16 @@ from meeting_intelligence.schemas import Transcript
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--environment-root", type=Path, required=True)
+    p.add_argument(
+        "--fresh-v8", action="store_true", help="Score the separately frozen ES2009a follow-up."
+    )
     a = p.parse_args()
     repo = Path(__file__).resolve().parents[1]
-    out = a.environment_root / "outputs/day10/final_2026-11-23"
-    gold_path = repo / "evaluation/day10_unseen_gold.json"
-    review_path = repo / "evaluation/day10_unseen_review.json"
+    prefix = "fresh_v8" if a.fresh_v8 else "day10_unseen"
+    folder = "fresh_v8_ES2009a" if a.fresh_v8 else "final_2026-11-23"
+    out = a.environment_root / "outputs/day10" / folder
+    gold_path = repo / "evaluation" / f"{prefix}_gold.json"
+    review_path = repo / "evaluation" / f"{prefix}_review.json"
     gold = json.loads(gold_path.read_text(encoding="utf-8"))
     ledger = json.loads(review_path.read_text(encoding="utf-8"))
     freeze = json.loads((out / "freeze.json").read_text(encoding="utf-8"))
@@ -81,11 +86,13 @@ def main():
         limitations=[
             "Small purposive kickoff-meeting sample; not general meeting accuracy.",
             "Assistant semantic adjudication; no independent human review.",
-            "No positive deadlines in this set; no deadline accuracy estimate.",
+            "No aggregate deadline accuracy estimate; inspect the semantic review for deadline findings."
+            if a.fresh_v8
+            else "No positive deadlines in this set; no deadline accuracy estimate.",
             "Task-intent scoring does not imply correct owner or complete detail.",
         ],
     )
-    (repo / "evaluation/day10_unseen_metrics.json").write_text(
+    (repo / "evaluation" / f"{prefix}_metrics.json").write_text(
         json.dumps(result, indent=2), encoding="utf-8"
     )
     print(
