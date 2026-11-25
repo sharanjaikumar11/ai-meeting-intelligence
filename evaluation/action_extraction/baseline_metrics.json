@@ -1,0 +1,178 @@
+{
+  "scope": "Twenty task-intent references from six project-unseen AMI excerpts; assistant annotated from human transcripts before predictions. Not independently human-reviewed; not official AMI test split.",
+  "annotation": "Assistant semantic review against frozen public AMI human-transcript references; not independently human-reviewed. Failed pipeline yields zero delivered predictions and all four reference tasks remain FN.",
+  "gold_sha256": "1b77a541093bde9fb3fb230f57763eeb20eb42310551bb45451e1959aafea9ea",
+  "review_sha256": "772162291edcd680f2ae06a1c951e003c83a45d4444c769755bb02af9c3d341c",
+  "cases": [
+    {
+      "case": "ES2006a_1235_1275",
+      "actions": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "missed_gold_ids": [
+          "a1",
+          "a2",
+          "a3"
+        ]
+      },
+      "wer": {
+        "substitutions": 1,
+        "deletions": 7,
+        "insertions": 0,
+        "reference_words": 90,
+        "word_errors": 8,
+        "wer": 0.08888888888888889
+      },
+      "pipeline_failed": false
+    },
+    {
+      "case": "ES2007a_1100_1199",
+      "actions": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "missed_gold_ids": []
+      },
+      "wer": {
+        "substitutions": 22,
+        "deletions": 60,
+        "insertions": 7,
+        "reference_words": 261,
+        "word_errors": 89,
+        "wer": 0.34099616858237547
+      },
+      "pipeline_failed": false
+    },
+    {
+      "case": "ES2010a_0575_0639",
+      "actions": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "missed_gold_ids": [
+          "a2"
+        ]
+      },
+      "wer": {
+        "substitutions": 6,
+        "deletions": 6,
+        "insertions": 1,
+        "reference_words": 149,
+        "word_errors": 13,
+        "wer": 0.087248322147651
+      },
+      "pipeline_failed": false
+    },
+    {
+      "case": "ES2011a_1015_1105",
+      "actions": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "missed_gold_ids": [
+          "a2"
+        ]
+      },
+      "wer": {
+        "substitutions": 23,
+        "deletions": 54,
+        "insertions": 3,
+        "reference_words": 251,
+        "word_errors": 80,
+        "wer": 0.3187250996015936
+      },
+      "pipeline_failed": false
+    },
+    {
+      "case": "IS1004a_0700_0767",
+      "actions": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "missed_gold_ids": []
+      },
+      "wer": {
+        "substitutions": 5,
+        "deletions": 28,
+        "insertions": 2,
+        "reference_words": 198,
+        "word_errors": 35,
+        "wer": 0.17676767676767677
+      },
+      "pipeline_failed": false
+    },
+    {
+      "case": "TS3006a_0807_1000",
+      "actions": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "missed_gold_ids": [
+          "a1",
+          "a2",
+          "a3",
+          "a4"
+        ]
+      },
+      "wer": {
+        "substitutions": 14,
+        "deletions": 57,
+        "insertions": 4,
+        "reference_words": 450,
+        "word_errors": 75,
+        "wer": 0.16666666666666666
+      },
+      "pipeline_failed": true
+    }
+  ],
+  "actions": {
+    "tp": 11,
+    "fp": 1,
+    "fn": 9,
+    "precision": 0.9166666666666666,
+    "recall": 0.55,
+    "f1": 0.6875
+  },
+  "wer": {
+    "substitutions": 71,
+    "deletions": 212,
+    "insertions": 17,
+    "reference_words": 1399,
+    "word_errors": 300,
+    "wer": 0.21443888491779842
+  },
+  "owner_correct": {
+    "correct": 8,
+    "matched_tasks": 11
+  },
+  "detail_correct": {
+    "correct": 8,
+    "matched_tasks": 11
+  },
+  "exact_evidence_verified": 39,
+  "limitations": [
+    "Small purposive kickoff-meeting sample; not general meeting accuracy.",
+    "Assistant semantic adjudication; no independent human review.",
+    "No positive deadlines in this set; no deadline accuracy estimate.",
+    "Task-intent scoring does not imply correct owner or complete detail."
+  ]
+}

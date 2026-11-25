@@ -1,0 +1,934 @@
+{
+  "created_utc": "2026-11-13T05:20:38.298128+00:00",
+  "python": "3.11.18",
+  "whisper_version": "20250625",
+  "torch_version": "2.9.1+cpu",
+  "device": "cpu",
+  "threads": 4,
+  "benchmark_version": 2,
+  "normalization": "Whisper EnglishTextNormalizer applied to both reference and hypothesis",
+  "decoding": {
+    "language": "en",
+    "task": "transcribe",
+    "fp16": false,
+    "temperature": 0,
+    "condition_on_previous_text": false
+  },
+  "limitations": [
+    "Three development clips from one headset-mix meeting.",
+    "Overlap serialized by onset; boundary words selected by midpoint.",
+    "No claim of final evaluation accuracy or speaker diarization quality.",
+    "Timing includes per-clip preprocessing; model loading measured separately."
+  ],
+  "results": [
+    {
+      "model": "tiny",
+      "load_seconds": 0.28797830012626946,
+      "wer": 0.4570815450643777,
+      "reference_words": 466,
+      "word_errors": 213,
+      "inference_seconds": 9.224902899935842,
+      "audio_seconds": 180,
+      "real_time_factor": 0.05124946055519912,
+      "clips": [
+        {
+          "clip_id": "ES2002a_0060_0120",
+          "start": 60,
+          "end": 120,
+          "reference": "Um and um this is just what we're gonna be doing over the next twenty five minutes Mm-hmm Um so first of all just to kind of make sure that we all know each other I'm Laura and I'm the project manager Do Great you want to introduce yourself again Hi I'm David and I'm supposed to be an industrial designer Okay And I'm Andrew and I'm uh our marketing Um expert I'm Craig and I'm User Interface Great Okay Um so we're designing a new remote control and um Oh I have to record who's here actually So that's David Andrew and Craig isn't it And you all arrived on time Um yeah so des uh design a new remote control Um as you can see it's supposed to be original trendy and user friendly Um so that's kind of our our",
+          "prediction": " And this is just what we're going to be doing over the next 25 minutes. So, first of all, it is to kind of make sure that we all know each other. I'm Laura and I'm the project manager. Do you want to introduce yourself again? I'm David and I'm supposed to be in industrial design. Okay. I'm Andrew and I'm our marketing expert. I'm Greg and I'm a huge earned face. Great. Okay. I'm sort of designing a Neuro-Mokon troll and I have to record he's here actually so that's David Andry and Craig is much Neuro-Mokon troll. Yes, which is a design a Neuro-Mokon troll. As you can see it's a spree original trendy and user friendly. So that's kind of our brief.",
+          "normalized_reference": "and this is just what we are going to be doing over the next 25 minutes so 1st of all just to kind of make sure that we all know each other i am laura and i am the project manager do great you want to introduce yourself again hi i am david and i am supposed to be an industrial designer okay and i am andrew and i am our marketing expert i am craig and i am user interface great okay so we are designing a new remote control and 0 i have to record who is here actually so that is david andrew and craig is not it and you all arrived on time yeah so des design a new remote control as you can see it is supposed to be original trendy and user friendly so that is kind of our our",
+          "normalized_prediction": "and this is just what we are going to be doing over the next 25 minutes so 1st of all it is to kind of make sure that we all know each other i am laura and i am the project manager do you want to introduce yourself again i am david and i am supposed to be in industrial design okay i am andrew and i am our marketing expert i am greg and i am a huge earned face great okay i am sort of designing a neuro mokon troll and i have to record he is here actually so that is david andry and craig is much neuro mokon troll yes which is a design a neuro mokon troll as you can see it is a spree original trendy and user friendly so that is kind of our brief",
+          "seconds": 3.226397299906239,
+          "wer": 0.273972602739726,
+          "substitutions": 28,
+          "deletions": 8,
+          "insertions": 4,
+          "reference_words": 146,
+          "segments": [
+            {
+              "start": 60.0,
+              "end": 68.0,
+              "text": " And this is just what we're going to be doing over the next 25 minutes."
+            },
+            {
+              "start": 68.0,
+              "end": 73.0,
+              "text": " So, first of all, it is to kind of make sure that we all know each other."
+            },
+            {
+              "start": 73.0,
+              "end": 75.0,
+              "text": " I'm Laura and I'm the project manager."
+            },
+            {
+              "start": 75.0,
+              "end": 78.0,
+              "text": " Do you want to introduce yourself again?"
+            },
+            {
+              "start": 78.0,
+              "end": 81.0,
+              "text": " I'm David and I'm supposed to be in industrial design."
+            },
+            {
+              "start": 81.0,
+              "end": 82.0,
+              "text": " Okay."
+            },
+            {
+              "start": 82.0,
+              "end": 87.0,
+              "text": " I'm Andrew and I'm our marketing expert."
+            },
+            {
+              "start": 87.0,
+              "end": 89.0,
+              "text": " I'm Greg and I'm a huge earned face."
+            },
+            {
+              "start": 89.0,
+              "end": 91.0,
+              "text": " Great. Okay."
+            },
+            {
+              "start": 92.36,
+              "end": 95.36,
+              "text": " I'm sort of designing a Neuro-Mokon troll and"
+            },
+            {
+              "start": 96.08,
+              "end": 99.08,
+              "text": " I have to record he's here actually so that's"
+            },
+            {
+              "start": 99.92,
+              "end": 101.92,
+              "text": " David Andry and Craig is much"
+            },
+            {
+              "start": 104.68,
+              "end": 106.68,
+              "text": " Neuro-Mokon troll."
+            },
+            {
+              "start": 109.32,
+              "end": 112.32,
+              "text": " Yes, which is a design a Neuro-Mokon troll."
+            },
+            {
+              "start": 112.32,
+              "end": 115.68,
+              "text": " As you can see it's a spree original trendy and user friendly."
+            },
+            {
+              "start": 115.68,
+              "end": 119.68,
+              "text": " So that's kind of our brief."
+            }
+          ]
+        },
+        {
+          "clip_id": "ES2002a_0600_0660",
+          "start": 600,
+          "end": 660,
+          "reference": "country Like how Just much money people have to spend on things Or just like like basic product podi positioning the twenty five Euro remote control might be a big hit in London might not be such a big hit in Greece who knows Aye I something see what like you that mean yeah yeah Marketing Good marketing Yep thoughts Oh gosh I should be writing all this down Um Right away I'm making some kind of assumptions about what what information we're given",
+          "prediction": " Like how much money people have to spend on this? Or just like basic product positioning. The 25-year-old remote control might be a big hit in London. Might not be such a big hit in Greece, who knows? Well, it's good. Marketing? Good marketing thoughts. Oh gosh, I should be riding all this down. I'm going to go ahead and do some things. I'm going to go ahead and do some things. I'm going to go ahead and do some things. I'm going to go ahead and do some things. I'm going to go ahead and do some things. I'm going to go ahead and do some things. I'm going to go ahead and do some things. what information we're given.",
+          "normalized_reference": "country like how just much money people have to spend on things or just like like basic product podi positioning the \u20ac25 remote control might be a big hit in london might not be such a big hit in greece who knows aye i something see what like you that mean yeah yeah marketing good marketing yep thoughts 0 gosh i should be writing all this down right away i am making some kind of assumptions about what what information we are given",
+          "normalized_prediction": "like how much money people have to spend on this or just like basic product positioning the 25 year old remote control might be a big hit in london might not be such a big hit in greece who knows well it is good marketing good marketing thoughts 0 gosh i should be riding all this down i am going to go ahead and do some things i am going to go ahead and do some things i am going to go ahead and do some things i am going to go ahead and do some things i am going to go ahead and do some things i am going to go ahead and do some things i am going to go ahead and do some things what information we are given",
+          "seconds": 2.762148200068623,
+          "wer": 1.0602409638554218,
+          "substitutions": 15,
+          "deletions": 12,
+          "insertions": 61,
+          "reference_words": 83,
+          "segments": [
+            {
+              "start": 600.0,
+              "end": 603.0,
+              "text": " Like how much money people have to spend on this?"
+            },
+            {
+              "start": 603.0,
+              "end": 606.0,
+              "text": " Or just like basic product positioning."
+            },
+            {
+              "start": 606.0,
+              "end": 611.0,
+              "text": " The 25-year-old remote control might be a big hit in London."
+            },
+            {
+              "start": 611.0,
+              "end": 616.0,
+              "text": " Might not be such a big hit in Greece, who knows?"
+            },
+            {
+              "start": 616.0,
+              "end": 617.0,
+              "text": " Well, it's good."
+            },
+            {
+              "start": 619.0,
+              "end": 621.0,
+              "text": " Marketing? Good marketing thoughts."
+            },
+            {
+              "start": 621.0,
+              "end": 623.0,
+              "text": " Oh gosh, I should be riding all this down."
+            },
+            {
+              "start": 630.0,
+              "end": 632.0,
+              "text": " I'm going to go ahead and do some"
+            },
+            {
+              "start": 632.0,
+              "end": 634.0,
+              "text": " things."
+            },
+            {
+              "start": 634.0,
+              "end": 636.0,
+              "text": " I'm going to go ahead and do some"
+            },
+            {
+              "start": 636.0,
+              "end": 638.0,
+              "text": " things."
+            },
+            {
+              "start": 638.0,
+              "end": 640.0,
+              "text": " I'm going to go ahead and do some"
+            },
+            {
+              "start": 640.0,
+              "end": 642.0,
+              "text": " things."
+            },
+            {
+              "start": 642.0,
+              "end": 644.0,
+              "text": " I'm going to go ahead and do some"
+            },
+            {
+              "start": 644.0,
+              "end": 646.0,
+              "text": " things."
+            },
+            {
+              "start": 646.0,
+              "end": 648.0,
+              "text": " I'm going to go ahead and do some"
+            },
+            {
+              "start": 648.0,
+              "end": 650.0,
+              "text": " things."
+            },
+            {
+              "start": 650.0,
+              "end": 652.0,
+              "text": " I'm going to go ahead and do some"
+            },
+            {
+              "start": 652.0,
+              "end": 654.0,
+              "text": " things."
+            },
+            {
+              "start": 654.0,
+              "end": 656.0,
+              "text": " I'm going to go ahead and do some"
+            },
+            {
+              "start": 656.0,
+              "end": 658.0,
+              "text": " things."
+            },
+            {
+              "start": 658.0,
+              "end": 660.0,
+              "text": " what information we're given."
+            }
+          ]
+        },
+        {
+          "clip_id": "ES2002a_0900_0960",
+          "start": 900,
+          "end": 960,
+          "reference": "be part of this new one at all And you keep losing them You keep Mm losing them Okay Finding them is really Mm a pain you know I Mm mean it's usually quite small or when you want Mm-hmm it right it slipped Mm-hmm behind the couch or it's Yeah Yeah kicked under the table W Yeah You get You those know ones where you can That's just really if good you id like whistle or make a really high pitched noise they beep Yep There I mean is that something we'd want to include do you think Uh Dunno sure Okay maybe I remember when the first remote control my my family had was on a cable Actually had a cable between it and the T_V_ and big like buttons that sort of like like on a blender or something My goodness And um you know when I think about what they are now it's better but actually it's still kind of I dunno like a massive junky thing on the table Still Maybe feels we could quite think primitive about how could be more you know streamlined Maybe S like a touch screen or something Something like that yeah Okay Or whatever would be technologically reasonable Uh-huh okay Well 'Cause I guess it could that's b up it to could our industrial it could be designer that f it could be that functionally",
+          "prediction": " part of this new one at all. You keep losing them. You keep losing them, okay. Finding them is just making them take them. It's usually quite small. Or when you want it right, it's in the helicopter. Yeah. You get those ones really, because if you like whistle or make really high pitch noise, they beep. Yep. There, I mean, is that something we'd want to include, do you think? Uh, do you know? Sure. I remember when the first remote control my family had was on a cable actually a cable between the TV and big buttons that sort of like on a blender or something. I get this. And I think about what they are now is better, but actually it's still kind of a massive junkie thing on the table. Still we could think about how could be more streamlined. Maybe like a touch screen or something. something like that or whatever would be technologically reasonable. Okay. Well, it could be a good example. It could be that function.",
+          "normalized_reference": "be part of this new one at all and you keep losing them you keep losing them okay finding them is really a pain you know i mean it is usually quite small or when you want it right it slipped behind the couch or it is yeah yeah kicked under the table w yeah you get you those know ones where you can that is just really if good you id like whistle or make a really high pitched noise they beep yep there i mean is that something we would want to include do you think dunno sure okay maybe i remember when the 1st remote control my my family had was on a cable actually had a cable between it and the t v and big like buttons that sort of like like on a blender or something my goodness and you know when i think about what they are now it is better but actually it is still kind of i dunno like a massive junky thing on the table still maybe feels we could quite think primitive about how could be more you know streamlined maybe s like a touch screen or something something like that yeah okay or whatever would be technologically reasonable huh okay well cause i guess it could that is b up it to could our industrial it could be designer that f it could be that functionally",
+          "normalized_prediction": "part of this new one at all you keep losing them you keep losing them okay finding them is just making them take them it is usually quite small or when you want it right it is in the helicopter yeah you get those ones really because if you like whistle or make really high pitch noise they beep yep there i mean is that something we would want to include do you think do you know sure i remember when the 1st remote control my family had was on a cable actually a cable between the tv and big buttons that sort of like on a blender or something i get this and i think about what they are now is better but actually it is still kind of a massive junkie thing on the table still we could think about how could be more streamlined maybe like a touch screen or something something like that or whatever would be technologically reasonable okay well it could be a good example it could be that function",
+          "seconds": 3.23635739996098,
+          "wer": 0.35864978902953587,
+          "substitutions": 22,
+          "deletions": 62,
+          "insertions": 1,
+          "reference_words": 237,
+          "segments": [
+            {
+              "start": 900.0,
+              "end": 903.0,
+              "text": " part of this new one at all."
+            },
+            {
+              "start": 903.0,
+              "end": 905.0,
+              "text": " You keep losing them."
+            },
+            {
+              "start": 905.0,
+              "end": 907.0,
+              "text": " You keep losing them, okay."
+            },
+            {
+              "start": 907.0,
+              "end": 909.0,
+              "text": " Finding them is just making them take them."
+            },
+            {
+              "start": 909.0,
+              "end": 911.0,
+              "text": " It's usually quite small."
+            },
+            {
+              "start": 911.0,
+              "end": 914.0,
+              "text": " Or when you want it right, it's in the helicopter."
+            },
+            {
+              "start": 914.0,
+              "end": 915.0,
+              "text": " Yeah."
+            },
+            {
+              "start": 915.0,
+              "end": 920.0,
+              "text": " You get those ones really, because if you like whistle or make really high pitch noise, they beep."
+            },
+            {
+              "start": 920.0,
+              "end": 921.0,
+              "text": " Yep."
+            },
+            {
+              "start": 921.0,
+              "end": 924.0,
+              "text": " There, I mean, is that something we'd want to include, do you think?"
+            },
+            {
+              "start": 924.0,
+              "end": 926.0,
+              "text": " Uh, do you know?"
+            },
+            {
+              "start": 926.0,
+              "end": 927.0,
+              "text": " Sure."
+            },
+            {
+              "start": 927.0,
+              "end": 932.0,
+              "text": " I remember when the first remote control my family had was on a cable"
+            },
+            {
+              "start": 932.0,
+              "end": 937.0,
+              "text": " actually a cable between the TV and big buttons that sort of like on a blender or something."
+            },
+            {
+              "start": 937.0,
+              "end": 938.0,
+              "text": " I get this."
+            },
+            {
+              "start": 938.0,
+              "end": 946.0,
+              "text": " And I think about what they are now is better, but actually it's still kind of a massive junkie thing on the table."
+            },
+            {
+              "start": 946.0,
+              "end": 951.0,
+              "text": " Still we could think about how could be more streamlined."
+            },
+            {
+              "start": 951.0,
+              "end": 953.0,
+              "text": " Maybe like a touch screen or something."
+            },
+            {
+              "start": 953.0,
+              "end": 956.2,
+              "text": " something like that or whatever would be technologically reasonable."
+            },
+            {
+              "start": 956.2,
+              "end": 957.2,
+              "text": " Okay."
+            },
+            {
+              "start": 957.2,
+              "end": 959.2,
+              "text": " Well, it could be a good example."
+            },
+            {
+              "start": 959.2,
+              "end": 960.2,
+              "text": " It could be that function."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "model": "base",
+      "load_seconds": 0.535601600073278,
+      "wer": 0.27896995708154504,
+      "reference_words": 466,
+      "word_errors": 130,
+      "inference_seconds": 16.25563669996336,
+      "audio_seconds": 180,
+      "real_time_factor": 0.09030909277757423,
+      "clips": [
+        {
+          "clip_id": "ES2002a_0060_0120",
+          "start": 60,
+          "end": 120,
+          "reference": "Um and um this is just what we're gonna be doing over the next twenty five minutes Mm-hmm Um so first of all just to kind of make sure that we all know each other I'm Laura and I'm the project manager Do Great you want to introduce yourself again Hi I'm David and I'm supposed to be an industrial designer Okay And I'm Andrew and I'm uh our marketing Um expert I'm Craig and I'm User Interface Great Okay Um so we're designing a new remote control and um Oh I have to record who's here actually So that's David Andrew and Craig isn't it And you all arrived on time Um yeah so des uh design a new remote control Um as you can see it's supposed to be original trendy and user friendly Um so that's kind of our our",
+          "prediction": " And this is just what we're going to be doing over the next 25 minutes. So first of all, just to kind of make sure that we all know each other. I'm Laura and I'm the Project Manager. Great. Do you want to introduce yourself again? Hi, I'm David and I'm supposed to be an industrial designer. Okay. I'm Andrew and I'm a marketing expert. I'm Greg and I'm Peter and Taface. Great. Okay. So we're designing a new remote control. And oh, I have to record he's here actually. So David, Andrea and Craig, isn't it? And you all arrive don't time. Yes, we designed a new remote control. As you can see, it's supposed to be original, trendy and user friendly. So that's kind of our brief.",
+          "normalized_reference": "and this is just what we are going to be doing over the next 25 minutes so 1st of all just to kind of make sure that we all know each other i am laura and i am the project manager do great you want to introduce yourself again hi i am david and i am supposed to be an industrial designer okay and i am andrew and i am our marketing expert i am craig and i am user interface great okay so we are designing a new remote control and 0 i have to record who is here actually so that is david andrew and craig is not it and you all arrived on time yeah so des design a new remote control as you can see it is supposed to be original trendy and user friendly so that is kind of our our",
+          "normalized_prediction": "and this is just what we are going to be doing over the next 25 minutes so 1st of all just to kind of make sure that we all know each other i am laura and i am the project manager great do you want to introduce yourself again hi i am david and i am supposed to be an industrial designer okay i am andrew and i am a marketing expert i am greg and i am peter and taface great okay so we are designing a new remote control and 0 i have to record he is here actually so david andrea and craig is not it and you all arrive do not time yes we designed a new remote control as you can see it is supposed to be original trendy and user friendly so that is kind of our brief",
+          "seconds": 5.503606999991462,
+          "wer": 0.136986301369863,
+          "substitutions": 12,
+          "deletions": 5,
+          "insertions": 3,
+          "reference_words": 146,
+          "segments": [
+            {
+              "start": 60.0,
+              "end": 68.0,
+              "text": " And this is just what we're going to be doing over the next 25 minutes."
+            },
+            {
+              "start": 68.0,
+              "end": 73.0,
+              "text": " So first of all, just to kind of make sure that we all know each other."
+            },
+            {
+              "start": 73.0,
+              "end": 75.0,
+              "text": " I'm Laura and I'm the Project Manager."
+            },
+            {
+              "start": 75.0,
+              "end": 76.0,
+              "text": " Great."
+            },
+            {
+              "start": 76.0,
+              "end": 78.0,
+              "text": " Do you want to introduce yourself again?"
+            },
+            {
+              "start": 78.0,
+              "end": 81.0,
+              "text": " Hi, I'm David and I'm supposed to be an industrial designer."
+            },
+            {
+              "start": 81.0,
+              "end": 82.0,
+              "text": " Okay."
+            },
+            {
+              "start": 82.0,
+              "end": 87.0,
+              "text": " I'm Andrew and I'm a marketing expert."
+            },
+            {
+              "start": 87.0,
+              "end": 89.0,
+              "text": " I'm Greg and I'm Peter and Taface."
+            },
+            {
+              "start": 89.0,
+              "end": 90.0,
+              "text": " Great."
+            },
+            {
+              "start": 90.0,
+              "end": 91.0,
+              "text": " Okay."
+            },
+            {
+              "start": 91.0,
+              "end": 95.28,
+              "text": " So we're designing a new remote control."
+            },
+            {
+              "start": 95.28,
+              "end": 98.75999999999999,
+              "text": " And oh, I have to record he's here actually."
+            },
+            {
+              "start": 98.75999999999999,
+              "end": 105.0,
+              "text": " So David, Andrea and Craig, isn't it?"
+            },
+            {
+              "start": 105.0,
+              "end": 108.0,
+              "text": " And you all arrive don't time."
+            },
+            {
+              "start": 108.0,
+              "end": 112.36,
+              "text": " Yes, we designed a new remote control."
+            },
+            {
+              "start": 112.36,
+              "end": 118.32,
+              "text": " As you can see, it's supposed to be original, trendy and user friendly."
+            },
+            {
+              "start": 118.32,
+              "end": 120.32,
+              "text": " So that's kind of our brief."
+            }
+          ]
+        },
+        {
+          "clip_id": "ES2002a_0600_0660",
+          "start": 600,
+          "end": 660,
+          "reference": "country Like how Just much money people have to spend on things Or just like like basic product podi positioning the twenty five Euro remote control might be a big hit in London might not be such a big hit in Greece who knows Aye I something see what like you that mean yeah yeah Marketing Good marketing Yep thoughts Oh gosh I should be writing all this down Um Right away I'm making some kind of assumptions about what what information we're given",
+          "prediction": " Like how much money people have to spend on things or just like basic product positioning the 25 euro Remote control might be a big hit in London might not be such a big hit in Greece who knows Marketing good marketing thoughts. Oh gosh. I should be writing all this time Right away I'm making some kind of assumptions about what information we're given.",
+          "normalized_reference": "country like how just much money people have to spend on things or just like like basic product podi positioning the \u20ac25 remote control might be a big hit in london might not be such a big hit in greece who knows aye i something see what like you that mean yeah yeah marketing good marketing yep thoughts 0 gosh i should be writing all this down right away i am making some kind of assumptions about what what information we are given",
+          "normalized_prediction": "like how much money people have to spend on things or just like basic product positioning the \u20ac25 remote control might be a big hit in london might not be such a big hit in greece who knows marketing good marketing thoughts 0 gosh i should be writing all this time right away i am making some kind of assumptions about what information we are given",
+          "seconds": 4.239782999968156,
+          "wer": 0.21686746987951808,
+          "substitutions": 1,
+          "deletions": 17,
+          "insertions": 0,
+          "reference_words": 83,
+          "segments": [
+            {
+              "start": 600.0,
+              "end": 607.22,
+              "text": " Like how much money people have to spend on things or just like basic product positioning the 25 euro"
+            },
+            {
+              "start": 607.92,
+              "end": 612.84,
+              "text": " Remote control might be a big hit in London might not be such a big hit in"
+            },
+            {
+              "start": 614.32,
+              "end": 616.32,
+              "text": " Greece who knows"
+            },
+            {
+              "start": 618.84,
+              "end": 622.48,
+              "text": " Marketing good marketing thoughts. Oh gosh. I should be writing all this time"
+            },
+            {
+              "start": 630.0,
+              "end": 659.96,
+              "text": " Right away I'm making some kind of assumptions about what information we're given."
+            }
+          ]
+        },
+        {
+          "clip_id": "ES2002a_0900_0960",
+          "start": 900,
+          "end": 960,
+          "reference": "be part of this new one at all And you keep losing them You keep Mm losing them Okay Finding them is really Mm a pain you know I Mm mean it's usually quite small or when you want Mm-hmm it right it slipped Mm-hmm behind the couch or it's Yeah Yeah kicked under the table W Yeah You get You those know ones where you can That's just really if good you id like whistle or make a really high pitched noise they beep Yep There I mean is that something we'd want to include do you think Uh Dunno sure Okay maybe I remember when the first remote control my my family had was on a cable Actually had a cable between it and the T_V_ and big like buttons that sort of like like on a blender or something My goodness And um you know when I think about what they are now it's better but actually it's still kind of I dunno like a massive junky thing on the table Still Maybe feels we could quite think primitive about how could be more you know streamlined Maybe S like a touch screen or something Something like that yeah Okay Or whatever would be technologically reasonable Uh-huh okay Well 'Cause I guess it could that's b up it to could our industrial it could be designer that f it could be that functionally",
+          "prediction": " part of this new one at all. You keep losing them. You keep losing them, okay. It's usually quite small or when you want it, right? You get these ones where you can, if you like, whistle or make really high pitched noise, they beep. I mean, is that something we'd want to include, you think? I don't know. I'm sure. Okay, maybe. I remember Remember when the first remote control my family had was on a cable, actually a cable between in the TV and big buttons that sort of like on a blender or something. And you know, and I think about what they are now is better, but actually it's still kind of, I don't know, like a massive junky thing on the table. Maybe we could think about how it could be more, you know, streamline. Maybe like touch screen or something. Something like that, or whatever would be technologically reasonable. Okay, it could be that it could be that function",
+          "normalized_reference": "be part of this new one at all and you keep losing them you keep losing them okay finding them is really a pain you know i mean it is usually quite small or when you want it right it slipped behind the couch or it is yeah yeah kicked under the table w yeah you get you those know ones where you can that is just really if good you id like whistle or make a really high pitched noise they beep yep there i mean is that something we would want to include do you think dunno sure okay maybe i remember when the 1st remote control my my family had was on a cable actually had a cable between it and the t v and big like buttons that sort of like like on a blender or something my goodness and you know when i think about what they are now it is better but actually it is still kind of i dunno like a massive junky thing on the table still maybe feels we could quite think primitive about how could be more you know streamlined maybe s like a touch screen or something something like that yeah okay or whatever would be technologically reasonable huh okay well cause i guess it could that is b up it to could our industrial it could be designer that f it could be that functionally",
+          "normalized_prediction": "part of this new one at all you keep losing them you keep losing them okay it is usually quite small or when you want it right you get these ones where you can if you like whistle or make really high pitched noise they beep i mean is that something we would want to include you think i do not know i am sure okay maybe i remember remember when the 1st remote control my family had was on a cable actually a cable between in the tv and big buttons that sort of like on a blender or something and you know and i think about what they are now is better but actually it is still kind of i do not know like a massive junky thing on the table maybe we could think about how it could be more you know streamline maybe like touch screen or something something like that or whatever would be technologically reasonable okay it could be that it could be that function",
+          "seconds": 6.512246700003743,
+          "wer": 0.3881856540084388,
+          "substitutions": 10,
+          "deletions": 74,
+          "insertions": 8,
+          "reference_words": 237,
+          "segments": [
+            {
+              "start": 900.0,
+              "end": 907.0,
+              "text": " part of this new one at all. You keep losing them. You keep losing them, okay."
+            },
+            {
+              "start": 907.0,
+              "end": 916.0,
+              "text": " It's usually quite small or when you want it, right? You get these ones where you can,"
+            },
+            {
+              "start": 916.0,
+              "end": 921.0,
+              "text": " if you like, whistle or make really high pitched noise, they beep. I mean, is that"
+            },
+            {
+              "start": 921.0,
+              "end": 928.0,
+              "text": " something we'd want to include, you think? I don't know. I'm sure. Okay, maybe. I remember"
+            },
+            {
+              "start": 928.0,
+              "end": 932.92,
+              "text": " Remember when the first remote control my family had was on a cable, actually a cable between"
+            },
+            {
+              "start": 932.92,
+              "end": 937.44,
+              "text": " in the TV and big buttons that sort of like on a blender or something."
+            },
+            {
+              "start": 937.44,
+              "end": 941.7,
+              "text": " And you know, and I think about what they are now is better, but actually it's still"
+            },
+            {
+              "start": 941.7,
+              "end": 946.04,
+              "text": " kind of, I don't know, like a massive junky thing on the table."
+            },
+            {
+              "start": 946.04,
+              "end": 951.08,
+              "text": " Maybe we could think about how it could be more, you know, streamline."
+            },
+            {
+              "start": 951.08,
+              "end": 953.4,
+              "text": " Maybe like touch screen or something."
+            },
+            {
+              "start": 953.4,
+              "end": 956.48,
+              "text": " Something like that, or whatever would be technologically reasonable."
+            },
+            {
+              "start": 956.48,
+              "end": 959.96,
+              "text": " Okay, it could be that it could be that function"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "model": "small",
+      "load_seconds": 2.0875190999358892,
+      "wer": 0.2510729613733906,
+      "reference_words": 466,
+      "word_errors": 117,
+      "inference_seconds": 52.34377439995296,
+      "audio_seconds": 180,
+      "real_time_factor": 0.29079874666640537,
+      "clips": [
+        {
+          "clip_id": "ES2002a_0060_0120",
+          "start": 60,
+          "end": 120,
+          "reference": "Um and um this is just what we're gonna be doing over the next twenty five minutes Mm-hmm Um so first of all just to kind of make sure that we all know each other I'm Laura and I'm the project manager Do Great you want to introduce yourself again Hi I'm David and I'm supposed to be an industrial designer Okay And I'm Andrew and I'm uh our marketing Um expert I'm Craig and I'm User Interface Great Okay Um so we're designing a new remote control and um Oh I have to record who's here actually So that's David Andrew and Craig isn't it And you all arrived on time Um yeah so des uh design a new remote control Um as you can see it's supposed to be original trendy and user friendly Um so that's kind of our our",
+          "prediction": " And this is just what we're going to be doing over the next 25 minutes. So first of all, just to kind of make sure that we all know each other, I'm Laura and I'm the project manager. Do you want to introduce yourself again? Hi, I'm David and I'm supposed to be an industrial designer. Okay. And I'm Andrew and I'm a marketing expert. I'm Greg and I'm user interface. Great, okay And so we're designing a new remote control and oh, I have to record he's here actually so that's David Andrew and Craig is not And you arrived on time And yes, we did it design a new remote control as you can see it's supposed to be original trendy and user-friendly So that's kind of our brief.",
+          "normalized_reference": "and this is just what we are going to be doing over the next 25 minutes so 1st of all just to kind of make sure that we all know each other i am laura and i am the project manager do great you want to introduce yourself again hi i am david and i am supposed to be an industrial designer okay and i am andrew and i am our marketing expert i am craig and i am user interface great okay so we are designing a new remote control and 0 i have to record who is here actually so that is david andrew and craig is not it and you all arrived on time yeah so des design a new remote control as you can see it is supposed to be original trendy and user friendly so that is kind of our our",
+          "normalized_prediction": "and this is just what we are going to be doing over the next 25 minutes so 1st of all just to kind of make sure that we all know each other i am laura and i am the project manager do you want to introduce yourself again hi i am david and i am supposed to be an industrial designer okay and i am andrew and i am a marketing expert i am greg and i am user interface great okay and so we are designing a new remote control and 0 i have to record he is here actually so that is david andrew and craig is not and you arrived on time and yes we did it design a new remote control as you can see it is supposed to be original trendy and user friendly so that is kind of our brief",
+          "seconds": 18.321292500011623,
+          "wer": 0.08904109589041095,
+          "substitutions": 7,
+          "deletions": 3,
+          "insertions": 3,
+          "reference_words": 146,
+          "segments": [
+            {
+              "start": 60.0,
+              "end": 67.0,
+              "text": " And this is just what we're going to be doing over the next 25 minutes."
+            },
+            {
+              "start": 67.0,
+              "end": 75.0,
+              "text": " So first of all, just to kind of make sure that we all know each other, I'm Laura and I'm the project manager."
+            },
+            {
+              "start": 75.0,
+              "end": 78.0,
+              "text": " Do you want to introduce yourself again?"
+            },
+            {
+              "start": 78.0,
+              "end": 81.0,
+              "text": " Hi, I'm David and I'm supposed to be an industrial designer."
+            },
+            {
+              "start": 81.0,
+              "end": 82.0,
+              "text": " Okay."
+            },
+            {
+              "start": 82.0,
+              "end": 87.0,
+              "text": " And I'm Andrew and I'm a marketing expert."
+            },
+            {
+              "start": 87.0,
+              "end": 89.0,
+              "text": " I'm Greg and I'm user interface."
+            },
+            {
+              "start": 89.0,
+              "end": 91.0,
+              "text": " Great, okay"
+            },
+            {
+              "start": 92.47999999999999,
+              "end": 94.6,
+              "text": " And so we're designing a new remote control and"
+            },
+            {
+              "start": 95.36,
+              "end": 99.03999999999999,
+              "text": " oh, I have to record he's here actually so that's"
+            },
+            {
+              "start": 100.0,
+              "end": 102.0,
+              "text": " David Andrew and Craig is not"
+            },
+            {
+              "start": 104.44,
+              "end": 106.44,
+              "text": " And you arrived on time"
+            },
+            {
+              "start": 108.2,
+              "end": 115.4,
+              "text": " And yes, we did it design a new remote control as you can see it's supposed to be original trendy and user-friendly"
+            },
+            {
+              "start": 115.4,
+              "end": 120.4,
+              "text": " So that's kind of our brief."
+            }
+          ]
+        },
+        {
+          "clip_id": "ES2002a_0600_0660",
+          "start": 600,
+          "end": 660,
+          "reference": "country Like how Just much money people have to spend on things Or just like like basic product podi positioning the twenty five Euro remote control might be a big hit in London might not be such a big hit in Greece who knows Aye I something see what like you that mean yeah yeah Marketing Good marketing Yep thoughts Oh gosh I should be writing all this down Um Right away I'm making some kind of assumptions about what what information we're given",
+          "prediction": " like how much money people have to spend on things. Or just like basic product positioning. A 25-year-old remote control might be a big hit in London. Might not be such a big hit in Greece. Who knows? I see what you're saying. Yeah. Marketing. Good marketing thoughts. Oh gosh, I should be writing all this down. Right away I'm making some kind of assumptions about what information we're giving to the",
+          "normalized_reference": "country like how just much money people have to spend on things or just like like basic product podi positioning the \u20ac25 remote control might be a big hit in london might not be such a big hit in greece who knows aye i something see what like you that mean yeah yeah marketing good marketing yep thoughts 0 gosh i should be writing all this down right away i am making some kind of assumptions about what what information we are given",
+          "normalized_prediction": "like how much money people have to spend on things or just like basic product positioning a 25 year old remote control might be a big hit in london might not be such a big hit in greece who knows i see what you are saying yeah marketing good marketing thoughts 0 gosh i should be writing all this down right away i am making some kind of assumptions about what information we are giving to the",
+          "seconds": 11.260158299934119,
+          "wer": 0.2289156626506024,
+          "substitutions": 7,
+          "deletions": 9,
+          "insertions": 3,
+          "reference_words": 83,
+          "segments": [
+            {
+              "start": 600.0,
+              "end": 603.0,
+              "text": " like how much money people have to spend on things."
+            },
+            {
+              "start": 603.0,
+              "end": 606.0,
+              "text": " Or just like basic product positioning."
+            },
+            {
+              "start": 606.0,
+              "end": 611.0,
+              "text": " A 25-year-old remote control might be a big hit in London."
+            },
+            {
+              "start": 611.0,
+              "end": 616.0,
+              "text": " Might not be such a big hit in Greece. Who knows?"
+            },
+            {
+              "start": 616.0,
+              "end": 618.0,
+              "text": " I see what you're saying. Yeah."
+            },
+            {
+              "start": 618.0,
+              "end": 621.0,
+              "text": " Marketing. Good marketing thoughts."
+            },
+            {
+              "start": 621.0,
+              "end": 623.0,
+              "text": " Oh gosh, I should be writing all this down."
+            },
+            {
+              "start": 630.0,
+              "end": 637.0,
+              "text": " Right away I'm making some kind of assumptions about what information we're giving to the"
+            }
+          ]
+        },
+        {
+          "clip_id": "ES2002a_0900_0960",
+          "start": 900,
+          "end": 960,
+          "reference": "be part of this new one at all And you keep losing them You keep Mm losing them Okay Finding them is really Mm a pain you know I Mm mean it's usually quite small or when you want Mm-hmm it right it slipped Mm-hmm behind the couch or it's Yeah Yeah kicked under the table W Yeah You get You those know ones where you can That's just really if good you id like whistle or make a really high pitched noise they beep Yep There I mean is that something we'd want to include do you think Uh Dunno sure Okay maybe I remember when the first remote control my my family had was on a cable Actually had a cable between it and the T_V_ and big like buttons that sort of like like on a blender or something My goodness And um you know when I think about what they are now it's better but actually it's still kind of I dunno like a massive junky thing on the table Still Maybe feels we could quite think primitive about how could be more you know streamlined Maybe S like a touch screen or something Something like that yeah Okay Or whatever would be technologically reasonable Uh-huh okay Well 'Cause I guess it could that's b up it to could our industrial it could be designer that f it could be that functionally",
+          "prediction": " be part of this new one at all. You keep losing them. You keep losing them, OK. Finding them is making a paving, you know. I mean, it's usually quite small. Or when you want it, right? It's in the end of the couch. Yeah. And then the table. You get those ones where you can, if you whistle or make a really high pitched noise, they beep. I mean, is that something we'd want to include, do you think? I don't know. Sure. OK, maybe. I remember when the first remote control my family had was on a cable. Actually, the cable between in the TV and big buttons that are on a blender or something. My goodness. And I think about what they are now. It's better, but actually it's still kind of, I don't know, a massive junky thing on the table. Still feel quite familiar. Maybe we could think about how it could be more streamlined. Maybe like a touch screen or something. Something like that. Or whatever would be technologically reasonable. Okay, it could be the function",
+          "normalized_reference": "be part of this new one at all and you keep losing them you keep losing them okay finding them is really a pain you know i mean it is usually quite small or when you want it right it slipped behind the couch or it is yeah yeah kicked under the table w yeah you get you those know ones where you can that is just really if good you id like whistle or make a really high pitched noise they beep yep there i mean is that something we would want to include do you think dunno sure okay maybe i remember when the 1st remote control my my family had was on a cable actually had a cable between it and the t v and big like buttons that sort of like like on a blender or something my goodness and you know when i think about what they are now it is better but actually it is still kind of i dunno like a massive junky thing on the table still maybe feels we could quite think primitive about how could be more you know streamlined maybe s like a touch screen or something something like that yeah okay or whatever would be technologically reasonable huh okay well cause i guess it could that is b up it to could our industrial it could be designer that f it could be that functionally",
+          "normalized_prediction": "be part of this new one at all you keep losing them you keep losing them ok finding them is making a paving you know i mean it is usually quite small or when you want it right it is in the end of the couch yeah and then the table you get those ones where you can if you whistle or make a really high pitched noise they beep i mean is that something we would want to include do you think i do not know sure ok maybe i remember when the 1st remote control my family had was on a cable actually the cable between in the tv and big buttons that are on a blender or something my goodness and i think about what they are now it is better but actually it is still kind of i do not know a massive junky thing on the table still feel quite familiar maybe we could think about how it could be more streamlined maybe like a touch screen or something something like that or whatever would be technologically reasonable okay it could be the function",
+          "seconds": 22.76232360000722,
+          "wer": 0.35864978902953587,
+          "substitutions": 21,
+          "deletions": 56,
+          "insertions": 8,
+          "reference_words": 237,
+          "segments": [
+            {
+              "start": 900.0,
+              "end": 903.0,
+              "text": " be part of this new one at all."
+            },
+            {
+              "start": 903.0,
+              "end": 904.68,
+              "text": " You keep losing them."
+            },
+            {
+              "start": 904.68,
+              "end": 906.44,
+              "text": " You keep losing them, OK."
+            },
+            {
+              "start": 906.44,
+              "end": 909.28,
+              "text": " Finding them is making a paving, you know."
+            },
+            {
+              "start": 909.28,
+              "end": 910.72,
+              "text": " I mean, it's usually quite small."
+            },
+            {
+              "start": 910.72,
+              "end": 911.96,
+              "text": " Or when you want it, right?"
+            },
+            {
+              "start": 911.96,
+              "end": 913.24,
+              "text": " It's in the end of the couch."
+            },
+            {
+              "start": 913.24,
+              "end": 913.74,
+              "text": " Yeah."
+            },
+            {
+              "start": 913.74,
+              "end": 915.28,
+              "text": " And then the table."
+            },
+            {
+              "start": 915.28,
+              "end": 917.84,
+              "text": " You get those ones where you can, if you whistle or make"
+            },
+            {
+              "start": 917.84,
+              "end": 920.6,
+              "text": " a really high pitched noise, they beep."
+            },
+            {
+              "start": 920.6,
+              "end": 924.24,
+              "text": " I mean, is that something we'd want to include, do you think?"
+            },
+            {
+              "start": 924.24,
+              "end": 925.76,
+              "text": " I don't know."
+            },
+            {
+              "start": 925.76,
+              "end": 926.72,
+              "text": " Sure."
+            },
+            {
+              "start": 926.72,
+              "end": 927.72,
+              "text": " OK, maybe."
+            },
+            {
+              "start": 927.72,
+              "end": 932.08,
+              "text": " I remember when the first remote control my family had was on a cable."
+            },
+            {
+              "start": 932.08,
+              "end": 937.04,
+              "text": " Actually, the cable between in the TV and big buttons that are on a blender or something."
+            },
+            {
+              "start": 937.04,
+              "end": 938.04,
+              "text": " My goodness."
+            },
+            {
+              "start": 938.04,
+              "end": 939.88,
+              "text": " And I think about what they are now."
+            },
+            {
+              "start": 939.88,
+              "end": 945.56,
+              "text": " It's better, but actually it's still kind of, I don't know, a massive junky thing on"
+            },
+            {
+              "start": 945.56,
+              "end": 946.56,
+              "text": " the table."
+            },
+            {
+              "start": 946.56,
+              "end": 947.56,
+              "text": " Still feel quite familiar."
+            },
+            {
+              "start": 947.56,
+              "end": 950.84,
+              "text": " Maybe we could think about how it could be more streamlined."
+            },
+            {
+              "start": 950.84,
+              "end": 953.4,
+              "text": " Maybe like a touch screen or something."
+            },
+            {
+              "start": 953.4,
+              "end": 954.4,
+              "text": " Something like that."
+            },
+            {
+              "start": 954.4,
+              "end": 956.44,
+              "text": " Or whatever would be technologically reasonable."
+            },
+            {
+              "start": 956.44,
+              "end": 960.04,
+              "text": " Okay, it could be the function"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

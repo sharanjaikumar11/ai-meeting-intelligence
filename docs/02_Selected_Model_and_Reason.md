@@ -72,6 +72,6 @@ This was a targeted development diagnostic, not a new comparison of Whisper mode
 
 ## 7. Evidence and interpretation
 
-The choice is supported by the saved [model-selection report](https://github.com/sharanjaikumar11/ai-meeting-intelligence/blob/1aa610bbf3363f2b398ebbcca90b99d79f940492/docs/DAY_01_RESULTS.md) and runtime `outputs/day01/benchmark_tiny_base_small.json`. The decoding diagnostic is recorded in [the recall audio probe](https://github.com/sharanjaikumar11/ai-meeting-intelligence/blob/main/evaluation/day10_recall_audio_probe.json).
+The choice is supported by the saved [model-selection report](https://github.com/sharanjaikumar11/ai-meeting-intelligence/blob/1aa610bbf3363f2b398ebbcca90b99d79f940492/docs/DAY_01_RESULTS.md) and runtime `outputs/day01/benchmark_tiny_base_small.json`. The decoding diagnostic is recorded in [the recall audio probe](https://github.com/sharanjaikumar11/ai-meeting-intelligence/blob/main/evaluation/speech/decoding_diagnostic.json).
 
 Small is the preferred model for this project's tested configuration. The sample is too small to establish that it is universally the best Whisper model or to predict full-meeting processing speed.

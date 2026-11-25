@@ -1,0 +1,148 @@
+{
+  "annotation": "Assistant semantic review against frozen public AMI human-transcript references; not independently human-reviewed. Failed pipeline yields zero delivered predictions and all four reference tasks remain FN.",
+  "gold_sha256": "1b77a541093bde9fb3fb230f57763eeb20eb42310551bb45451e1959aafea9ea",
+  "cases": {
+    "ES2006a_1235_1275": {
+      "prediction_sha256": {
+        "transcript": "91db41aa0c777758fadd3ddff6567ea4c3337cabf6e0d642c475d757a546acb8",
+        "actions": "8b0e5c2e987215176b705d6e7d72c58d4c80d198bde85e3d2fa298cc582d642c",
+        "wer": "3f104d0b81d1dc7a4b627934608dc7f53accfa10e281a4ffecc3a61041ee1361"
+      },
+      "actions": []
+    },
+    "ES2007a_1100_1199": {
+      "prediction_sha256": {
+        "transcript": "d6fcc51f6be2f6a346f2c02ef4f34004199235ca220bc01d236eaf62075ee74e",
+        "actions": "cc0b95db5b8bcad6b746e8b6c1f55300480688d6adbdc4815d4abc2004a43a33",
+        "wer": "1a8845e9e3644d8e20d8b9fb7b542b908e3ce63684dff987fb648181fab8d998"
+      },
+      "actions": [
+        {
+          "prediction_id": "action_0000",
+          "gold_id": "a1",
+          "owner_correct": false,
+          "detail_correct": true,
+          "reason": "Buttons task matches; role attribution to User Interface Designer is missing."
+        },
+        {
+          "prediction_id": "action_0001",
+          "gold_id": "a2",
+          "owner_correct": true,
+          "detail_correct": false,
+          "reason": "Physical box design matches; contents/how it works detail is omitted."
+        },
+        {
+          "prediction_id": "action_0002",
+          "gold_id": "a3",
+          "owner_correct": false,
+          "detail_correct": false,
+          "reason": "Research intent matches; marketing ownership and specification deliverable are omitted."
+        }
+      ]
+    },
+    "ES2010a_0575_0639": {
+      "prediction_sha256": {
+        "transcript": "e80c61a22b29027dd11e19c12c1c5c582a5340e35419569d287678f2befcff38",
+        "actions": "5c986c5bf10f325a74714c6ec3166582e5f1f09a790963487a0d392cade73cc6",
+        "wer": "c5367c6c314f5afa6016baa0794c2c96baeb3ce6d6f77e025d277393b26e5431"
+      },
+      "actions": [
+        {
+          "prediction_id": "action_0000",
+          "gold_id": "a1",
+          "owner_correct": true,
+          "detail_correct": true,
+          "reason": "Working design correctly assigned to ID."
+        },
+        {
+          "prediction_id": "action_0001",
+          "gold_id": "a3",
+          "owner_correct": true,
+          "detail_correct": true,
+          "reason": "User requirements specification correctly assigned to Courtney; technical functions task is omitted."
+        }
+      ]
+    },
+    "ES2011a_1015_1105": {
+      "prediction_sha256": {
+        "transcript": "9b729726c8e560008543f699506461210ecd180ae1bacbe535c413fbfa3db44e",
+        "actions": "0c434d81fecad78bc9998355bf3be96f2a2b24e29353ec794aedbf7aa4f32a9b",
+        "wer": "8983d930627f5eb180bd4119e574a6f203deacd645eaa6973df58c6a0eb2f6b2"
+      },
+      "actions": [
+        {
+          "prediction_id": "action_0000",
+          "gold_id": "a1",
+          "owner_correct": true,
+          "detail_correct": false,
+          "reason": "Working-design intent and role match; screen/physical details omitted."
+        },
+        {
+          "prediction_id": "action_0001",
+          "gold_id": null,
+          "owner_correct": false,
+          "detail_correct": false,
+          "reason": "Find out what technical functions means is a clarification, not the assigned technical-functions design deliverable. Count FP and retain a2 as missed."
+        },
+        {
+          "prediction_id": "action_0002",
+          "gold_id": "a3",
+          "owner_correct": false,
+          "detail_correct": true,
+          "reason": "User requirements intent matches, but group we replaces the marketing role."
+        }
+      ]
+    },
+    "IS1004a_0700_0767": {
+      "prediction_sha256": {
+        "transcript": "719f753f8a5d96a9c78e4bb89a527a4ae22c4c0fe095a369463a2e7ab97f8c1d",
+        "actions": "7ad6f4b0bc491cf4bb169a1fd3fce139983f07a7b3db4888561850e7e0629b9d",
+        "wer": "0525668aa1fa25db8414fe548e77c1d63149293fb808b7e688953f7f8ee228f4"
+      },
+      "actions": [
+        {
+          "prediction_id": "action_0000",
+          "gold_id": "a1",
+          "owner_correct": true,
+          "detail_correct": true,
+          "reason": "Pricing and expectations research correctly assigned to marketing."
+        },
+        {
+          "prediction_id": "action_0001",
+          "gold_id": "a2",
+          "owner_correct": true,
+          "detail_correct": true,
+          "reason": "Working design matches; unknown recipient preserved."
+        },
+        {
+          "prediction_id": "action_0002",
+          "gold_id": "a3",
+          "owner_correct": true,
+          "detail_correct": true,
+          "reason": "Technical functions matches; unknown recipient preserved."
+        },
+        {
+          "prediction_id": "action_0003",
+          "gold_id": "a4",
+          "owner_correct": true,
+          "detail_correct": true,
+          "reason": "Requirements specification matches; unknown recipient preserved."
+        }
+      ]
+    },
+    "TS3006a_0807_1000": {
+      "prediction_sha256": {
+        "transcript": "aa905037cc1fa0fce1aecc3474e9c5fde29642bf55498bd21ca5d6cee583f90e",
+        "wer": "87d8de7fac2228745dc9d89603953b916f664c4f28f62479a9722d9487a68dd4"
+      },
+      "actions": [],
+      "failure": {
+        "reason": "Owner mention is not an exact phrase in cited evidence; initial candidate and bounded correction rejected. No output saved.",
+        "artifact_sha256": {
+          "calls/b47a337b7cb8f890105251c185d7e41c08ef59c18a1da50928db058b4e0d2420.json": "060132075b46801c25b64ec2d9330d442e51941c0d02e9cec3404f81d60be7d6",
+          "calls/d339536ff61dfee56f3658480506393dea62d93e6b7f2e9c8ee60482e64f2379.json": "2cb59598ad96dcb0990a5379531d2febf0b11171a185618c8b7753154da985a2"
+        }
+      }
+    }
+  }
+}

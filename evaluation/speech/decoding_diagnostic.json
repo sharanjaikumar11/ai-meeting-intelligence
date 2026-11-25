@@ -1,0 +1,44 @@
+{
+  "scope": "Known missed-task diagnostic, not held-out evaluation; no end-to-end recall claim",
+  "source": "C:\\Users\\shara\\Projects\\ai-meeting-intelligence\\data\\recordings\\IS1003b.Mix-Headset.wav",
+  "start": 1555,
+  "duration": 30,
+  "model": "small",
+  "threads": 4,
+  "reference_hints_supplied_to_model": false,
+  "gemini_requests": 0,
+  "script_sha256": "25d8a0fa62a94d0b01f4ab66600882456fb14d41ee2b693052e2656d4861b013",
+  "results": [
+    {
+      "decoding": "greedy",
+      "prediction": " You will have as the idea, I don't remember, what is it? In the standard designer. To put component. And the user interface designer to work on the user interface concept. And Florent to work on his subject. And so specific instructions.",
+      "reference": "y you you will have as the i d i do not remember what is industrial industr industrial designer designer industrial yeah designer to put component pon component yeah yeah and the user interface designer to work on the user interface concept okay and florent to work my subject yep and so specific instructions",
+      "wer": 0.35185185185185186,
+      "substitutions": 6,
+      "deletions": 12,
+      "insertions": 1,
+      "reference_words": 54,
+      "seconds": 22.389521600212902
+    },
+    {
+      "decoding": "beam5",
+      "prediction": " You will have as the idea, I don't remember, what is it? An industrial designer. An industrial designer. Yeah. To put... Component. Component. Yeah. And the user interface designer to work on the user interface concept. Okay. And Florent to work on his subject. Yep. And so, specific instructions.",
+      "reference": "y you you will have as the i d i do not remember what is industrial industr industrial designer designer industrial yeah designer to put component pon component yeah yeah and the user interface designer to work on the user interface concept okay and florent to work my subject yep and so specific instructions",
+      "wer": 0.24074074074074073,
+      "substitutions": 5,
+      "deletions": 6,
+      "insertions": 2,
+      "reference_words": 54,
+      "seconds": 38.27459129970521
+    }
+  ],
+  "original_window": {
+    "prediction": "You will have as the idea, I don't remember, what is an industrial designer to put and the user interface designer to work on the user interface concept and flow into work on a subject and so specific instructions will",
+    "wer": 0.4074074074074074,
+    "substitutions": 5,
+    "deletions": 15,
+    "insertions": 2,
+    "reference_words": 54,
+    "boundary_policy": "Original hypothesis words selected by midpoint; new probes transcribe the exact audio crop. Alignment differences can affect boundary words."
+  }
+}

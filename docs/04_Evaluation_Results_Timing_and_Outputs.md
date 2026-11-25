@@ -139,10 +139,10 @@ The answer status was `answered`, and its supporting transcript citations were v
 
 | Record | Location |
 |---|---|
-| Improved action metrics and review | `evaluation/release_v9_metrics.json`, `evaluation/release_v9_review.json` |
-| Fresh v8 metrics and review | `evaluation/fresh_v8_metrics.json`, `evaluation/fresh_v8_review.json` |
-| Original 20-task baseline | `evaluation/day10_unseen_metrics.json` |
-| Required decision and QA aggregate metrics | `evaluation/day09_metrics.json` |
+| Improved action metrics and review | `evaluation/action_extraction/final_metrics.json`, `evaluation/action_extraction/final_review.json` |
+| Fresh v8 metrics and review | `evaluation/fresh_meeting/initial_metrics.json`, `evaluation/fresh_meeting/initial_review.json` |
+| Original 20-task baseline | `evaluation/action_extraction/baseline_metrics.json` |
+| Required decision and QA aggregate metrics | `evaluation/decision_qa/metrics.json` |
 | Saved v9 action outputs | Runtime `outputs/day10/release_v9/` |
 | Source transcription timing files | Runtime `outputs/day10/final_2026-11-23/*.timing.json` |
 | Demo combined JSON | Runtime `outputs/day10/final_2026-11-23/demo.result.json` |

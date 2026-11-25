@@ -9,7 +9,7 @@ Convert meeting audio/video into timestamped transcripts, speaker labels, summar
 - [Pipeline details](docs/03_Pipeline_Details.md)
 - [Final evaluation, timings and outputs](docs/04_Evaluation_Results_Timing_and_Outputs.md)
 
-The final v9 action extractor achieved **88.24% precision, 75% recall and 81.08% F1** on the same 20-task development set. Recall improved from 55%; these tuned cases are not a new unseen benchmark. The original decision and QA aggregate results remain available in `evaluation/day09_metrics.json`. Model accuracy limitations remain; this is a local single-user application.
+The final v9 action extractor achieved **88.24% precision, 75% recall and 81.08% F1** on the same 20-task development set. Recall improved from 55%; these tuned cases are not a new unseen benchmark. The original decision and QA aggregate results remain available in `evaluation/decision_qa/metrics.json`. Model accuracy limitations remain; this is a local single-user application.
 
 ## Quick demo on the configured machine
 

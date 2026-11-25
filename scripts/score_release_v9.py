@@ -16,7 +16,7 @@ def main():
     a = p.parse_args()
     repo = Path(__file__).resolve().parents[1]
     out = a.environment_root / "outputs/day10/release_v9"
-    review_path = repo / "evaluation/release_v9_review.json"
+    review_path = repo / "evaluation/action_extraction/final_review.json"
     ledger = json.loads(review_path.read_text(encoding="utf-8"))
     manifest = json.loads((out / "source_sha256.json").read_text(encoding="utf-8"))
     for rel, digest in manifest.items():
@@ -24,7 +24,8 @@ def main():
     reports = {}
     seen = set()
     for name, folder in [("day10_unseen", "final_2026-11-23"), ("fresh_v8", "fresh_v8_ES2009a")]:
-        gold_path = repo / "evaluation" / f"{name}_gold.json"
+        reference_folder = "action_extraction" if name == "day10_unseen" else "fresh_meeting"
+        gold_path = repo / "evaluation" / reference_folder / "reference.json"
         assert sha(gold_path) == ledger["gold_sha256"][name]
         gold = json.loads(gold_path.read_text(encoding="utf-8"))
         rows = []
@@ -66,7 +67,7 @@ def main():
         review_sha256=sha(review_path),
         results=reports,
     )
-    (repo / "evaluation/release_v9_metrics.json").write_text(
+    (repo / "evaluation/action_extraction/final_metrics.json").write_text(
         json.dumps(result, indent=2), encoding="utf-8"
     )
     print(

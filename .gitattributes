@@ -1,0 +1,3 @@
+# Preserve evaluation evidence bytes: reviews bind artifacts by SHA-256.
+evaluation/*.json -text whitespace=cr-at-eol
+evaluation/*/*.json -text whitespace=cr-at-eol

@@ -1,0 +1,71 @@
+{
+  "description": "Retained evaluation evidence, relocated byte-for-byte. Historical identifiers inside artifacts are preserved for provenance.",
+  "source_revision": "5d957d1",
+  "artifacts": [
+    {
+      "path": "decision_qa/reference.json",
+      "sha256": "36123b2aaa5efaa9f1213c905c270ab67b555dd57b2305000687c5f6f360f6e1",
+      "original_path": "evaluation/day09_gold.json"
+    },
+    {
+      "path": "decision_qa/metrics.json",
+      "sha256": "be4ebe60ad1c2e7b0f3b53f70f2494ec468fe1d968407ba8b895757a2d168ab8",
+      "original_path": "evaluation/day09_metrics.json"
+    },
+    {
+      "path": "decision_qa/review.json",
+      "sha256": "4615fa3ce91175fdd77e102177b4cd7dbb3804c32794477b8749e3148ebfd93d",
+      "original_path": "evaluation/day09_adjudication.json"
+    },
+    {
+      "path": "action_extraction/reference.json",
+      "sha256": "1b77a541093bde9fb3fb230f57763eeb20eb42310551bb45451e1959aafea9ea",
+      "original_path": "evaluation/day10_unseen_gold.json"
+    },
+    {
+      "path": "action_extraction/baseline_metrics.json",
+      "sha256": "34d6e96da6d49b8a91d42f9bcdb3bf563b4c07baca1018a1a934b1d7c64db2b7",
+      "original_path": "evaluation/day10_unseen_metrics.json"
+    },
+    {
+      "path": "action_extraction/baseline_review.json",
+      "sha256": "772162291edcd680f2ae06a1c951e003c83a45d4444c769755bb02af9c3d341c",
+      "original_path": "evaluation/day10_unseen_review.json"
+    },
+    {
+      "path": "action_extraction/final_metrics.json",
+      "sha256": "70e44a2f720f9b3d1f7402009b14c93c0eb1fe6fdd9d2f1625d187a8b016bb97",
+      "original_path": "evaluation/release_v9_metrics.json"
+    },
+    {
+      "path": "action_extraction/final_review.json",
+      "sha256": "f278da85b4ab836634f9b9fbcce9ec97fe8c6b6c2f6f840f98eb81de402da7fd",
+      "original_path": "evaluation/release_v9_review.json"
+    },
+    {
+      "path": "fresh_meeting/reference.json",
+      "sha256": "6f4d1bb8677093c1e3b9e8bc81a56d238e76ddbf0cc40ea25913cf00e87ca2a5",
+      "original_path": "evaluation/fresh_v8_gold.json"
+    },
+    {
+      "path": "fresh_meeting/initial_metrics.json",
+      "sha256": "6592412124f1e631e00e5c2727242d7cc6192216b52e8121527628bd0ea1a0c5",
+      "original_path": "evaluation/fresh_v8_metrics.json"
+    },
+    {
+      "path": "fresh_meeting/initial_review.json",
+      "sha256": "0541bcc6c967d5be0c4bf474725fa34b174891f4faea118e0c443b2c8ea449ac",
+      "original_path": "evaluation/fresh_v8_review.json"
+    },
+    {
+      "path": "speech/decoding_diagnostic.json",
+      "sha256": "3b9f829e8f8b57583e956b9d1c542c1f002f7f9678abf3baae84dbe807628ca0",
+      "original_path": "evaluation/day10_recall_audio_probe.json"
+    },
+    {
+      "path": "speech/model_benchmark.json",
+      "sha256": "f04ee5710ae2cb4209cf81b6117c2ea67786ec985a16b93f47377af15ea3c35c",
+      "original_path": "runtime/outputs/day01/benchmark_tiny_base_small.json"
+    }
+  ]
+}

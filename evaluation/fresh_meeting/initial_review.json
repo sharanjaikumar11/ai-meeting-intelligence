@@ -1,0 +1,59 @@
+{
+  "annotation": "Assistant semantic adjudication against frozen labels; not independent human review. Owner a2 in the first case is contextually ambiguous.",
+  "gold_sha256": "6f4d1bb8677093c1e3b9e8bc81a56d238e76ddbf0cc40ea25913cf00e87ca2a5",
+  "cases": {
+    "ES2009a_0825_0891": {
+      "prediction_sha256": {
+        "transcript": "3718f59db99f6e379dbe74d775bcb6d4b4f19196c5febf94d007a18268524ab0",
+        "actions": "4490a9da23517d5cdb5191f8f19b450c92f1e2cc37ec633aab43bb34e8e840b5",
+        "wer": "5eaa47b7076c28291eb570134e28383161b4a831c65edcce4b47b3b94da3034e"
+      },
+      "actions": [
+        {
+          "prediction_id": "action_0000",
+          "gold_id": "a1",
+          "owner_correct": true,
+          "detail_correct": false,
+          "reason": "Design-work intent and Industrial Designer role match; task text omits basic function detail."
+        },
+        {
+          "prediction_id": "action_0001",
+          "gold_id": "a2",
+          "owner_correct": false,
+          "detail_correct": true,
+          "reason": "User-wants reporting matches. UID is plausible from adjacent context but frozen conservative reference leaves ambiguous you unresolved; owner counted incorrect under that rubric."
+        },
+        {
+          "prediction_id": "action_0002",
+          "gold_id": "a3",
+          "owner_correct": true,
+          "detail_correct": true,
+          "reason": "Collective discussion of wants versus capabilities matches; next-meeting deadline retained event-relative with no invented date."
+        }
+      ]
+    },
+    "ES2009a_1300_1399": {
+      "prediction_sha256": {
+        "transcript": "8b634848f2e1dee5aa41f2c32a3b32cfe95bfd0658d5777dff0b84034d565f95",
+        "actions": "a1489e7dae20a0f92980196c2757358a127f943ee9a31f4357f1bf177f730dd3",
+        "wer": "e273de4924c59dfc6cb56004c169b2366f1edf7ba1cad75469b4fa8b3baa3432"
+      },
+      "actions": [
+        {
+          "prediction_id": "action_0000",
+          "gold_id": null,
+          "owner_correct": false,
+          "detail_correct": false,
+          "reason": "Be careful about the target audience is a caution/constraint, not a concrete follow-up deliverable."
+        },
+        {
+          "prediction_id": "action_0001",
+          "gold_id": "a1",
+          "owner_correct": false,
+          "detail_correct": false,
+          "reason": "Documenting ideas matches; explicit first-person owner is downgraded to unknown and trade-off detail omitted."
+        }
+      ]
+    }
+  }
+}
