@@ -1,12 +1,12 @@
 # Day 9 evaluation artifacts
 
-Completed 2026-11-22: this folder contains the frozen structured reference, hash-bound semantic review ledger, scoring tools and compact metrics report. See `docs/DAY_09_PROTOCOL.md` for inclusion, matching and scoring rules, and `docs/DAY_09.md` for results and limits. `day09_review_progress.json` is historical evidence from the quota pause; `day09_adjudication.json` supersedes it.
+Completed 2026-11-22: this folder contains the frozen structured reference, hash-bound semantic review ledger, scoring tools and compact metrics report. See [historical DAY_09_PROTOCOL](https://github.com/sharanjaikumar11/ai-meeting-intelligence/blob/1aa610bbf3363f2b398ebbcca90b99d79f940492/docs/DAY_09_PROTOCOL.md) for inclusion, matching and scoring rules, and [historical DAY_09](https://github.com/sharanjaikumar11/ai-meeting-intelligence/blob/1aa610bbf3363f2b398ebbcca90b99d79f940492/docs/DAY_09.md) for results and limits. `day09_review_progress.json` is historical evidence from the quota pause; `day09_adjudication.json` supersedes it.
 
 The reference is **assistant-authored from AMI human transcripts**, not independently human-validated gold. It was fixed before inference. Scores describe a small purposive pilot only. Do not use these three excerpts for further tuning and still call them held-out test data.
 
 ## Reproduce
 
-The working application now includes Day 10 changes. To reproduce the original Day 9 scores, extract `outputs/day09/day09_evaluation_bundle.zip`, use its `source` directory, and place the bundled `outputs/day09` beneath the environment root. The original scorer intentionally rejects the changed working checkout. See `docs/DAY_10_IMPROVEMENTS.md` for the separate known-example improvement check.
+The working application now includes Day 10 changes. To reproduce the original Day 9 scores, extract `outputs/day09/day09_evaluation_bundle.zip`, use its `source` directory, and place the bundled `outputs/day09` beneath the environment root. The original scorer intentionally rejects the changed working checkout. See [historical DAY_10_IMPROVEMENTS](https://github.com/sharanjaikumar11/ai-meeting-intelligence/blob/1aa610bbf3363f2b398ebbcca90b99d79f940492/docs/DAY_10_IMPROVEMENTS.md) for the separate known-example improvement check.
 
 Run from the source repository in PowerShell:
 
